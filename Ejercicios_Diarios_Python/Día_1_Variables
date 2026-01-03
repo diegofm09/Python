@@ -1,0 +1,2 @@
+codigo = "hola, este es mi primer día de Python"
+print (codigo)
