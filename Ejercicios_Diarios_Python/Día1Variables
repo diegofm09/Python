@@ -1,0 +1,18 @@
+edad = 16;
+nombre = "Diego"
+
+Animal = "Perro"; Animal2 = "Gato"
+
+print (Animal)
+print ("Hola, mi nombre es Diego")
+print (Animal2, edad)
+
+Dia = 18
+print (Dia)
+Dia = 19
+print (Dia)
+
+saludo = "Hola"
+nombre = "Me llamo Diego"
+edad = "tengo 16 años"
+print (saludo, edad, nombre)
