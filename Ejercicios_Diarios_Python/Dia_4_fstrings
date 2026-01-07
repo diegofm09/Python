@@ -1,0 +1,8 @@
+nombre = "Diego"
+print (f"Hola, mi nombre es,{nombre}")
+
+
+nombre = "Diego"
+edad = 16
+pais = "España"
+print (f"Hola, mi nombre es {nombre}, tengo {edad} años y soy de {pais}")
