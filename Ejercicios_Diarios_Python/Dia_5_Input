@@ -1,0 +1,6 @@
+pais = input("Cual es tu pais\n")
+print (f"Eres de {pais}")
+
+edad = int(input("Cuantos años tienes\n"))
+edad_en_10_años = edad + 10
+print (f"En 10 años tendrás {edad_en_10_años}")
