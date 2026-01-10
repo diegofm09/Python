@@ -1,0 +1,4 @@
+n1 = float(input("Hola!, dime un numero:\n"))
+n2 = float(input("Gracias, ahora dime otro\n"))
+n3 = float(input("Y por último dime otro:\n"))
+print (f"(El resultado de esos numeros sumados es de {n1 + n2 + n3})")
