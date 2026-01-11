@@ -1,0 +1,9 @@
+numero = input("Dime un numero cualquiera, puede ser con o sin decimales\n")
+
+numero_entero = int(float(numero))
+numero_flotante = float(numero)
+numero_booleano = bool(numero)
+
+print (f"Si tu numero fuese de {type(numero_entero)} seria {numero_entero}")
+print (f"Si tu numero fuese de {type(numero_flotante)} seria {numero_flotante}")
+print (f"Si tu numero fuese de {type(numero_booleano)} seria {numero_booleano}")
