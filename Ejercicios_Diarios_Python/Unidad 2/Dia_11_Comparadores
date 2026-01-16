@@ -1,0 +1,5 @@
+n1 = float(input("Pon un numero\n"))
+n2 = float(input("Pon otro\n"))
+print (f"El numero 1 es igual que el 2?\n {n1 == n2}")
+print (f"El numero 1 es mayor que el 2?\n {n1 > n2}")
+print (f"El numero 1 es menor que el 2?\n {n1 < n2}")
