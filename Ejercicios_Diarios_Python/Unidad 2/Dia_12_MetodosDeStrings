@@ -1,0 +1,9 @@
+frase = "hola, Me llAmo diego\n"
+
+print (frase.capitalize())
+print(frase.upper())
+print(frase.lower())
+
+nombre = input("Como te llamas\n")
+nombre = nombre.capitalize()
+print(f"Hola {nombre}")
