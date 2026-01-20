@@ -1,0 +1,3 @@
+edad = int(input("Dime tu edad\n"))
+if edad >= 18 and not edad < 0:
+    print (f"Que bien, al tener {edad}, significa que eres mayor de edad")
