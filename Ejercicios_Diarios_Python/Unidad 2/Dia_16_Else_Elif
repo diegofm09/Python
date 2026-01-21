@@ -1,0 +1,27 @@
+nombre = input("Hola, vas a realizar un test corto sobre literatura, primero de todo, cual es tu nombre\n")
+print (f"Bienvenido, {nombre}, te deseo suerte, empecemos.\n")
+respuesta_1 = int(input("Primera pregunta, cuantas coplas tiene Coplas por la Muerte de su Padre\n"))
+if respuesta_1 < 40:
+    print ("Incorrecto, son más")
+elif respuesta_1 > 40:
+    print ("Incorrecto, te has pasado")
+elif respuesta_1 == 40:
+    print(f"Correcto, felicidades {nombre}")
+
+respuesta_2 = input("\nCual es el apellido del autor de este libro\n")
+respuesta_2 = respuesta_2.capitalize()
+if respuesta_2 == "Manrique":
+    print ("Acertaste, bien hecho")
+else:
+    print("Incorrecto")
+
+respuesta_3 = input("\nPor ultimo, cual es el rey que contribuyó en la prosa de esta época:\n a) Alfonso X\n b) Alfonso XI\n c) Alfonso IX\n")
+respuesta_3 = respuesta_3.upper()
+if respuesta_3 == "ALFONSO X":
+    print ("Diste en el clavo, felicidades, superaste el test")
+elif respuesta_3 == "ALFONSO IX":
+    print (f"Lo siento {nombre}, pero Alfonso IX no era la solución")
+elif respuesta_3 == "ALFONSO XI":
+    print (f"Lo siento {nombre}, pero Alfonso XI no era la solución")
+else:
+    print ("Responde una de esas opciones")
