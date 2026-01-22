@@ -17,11 +17,11 @@ else:
 
 respuesta_3 = input("\nPor ultimo, cual es el rey que contribuyó en la prosa de esta época:\n a) Alfonso X\n b) Alfonso XI\n c) Alfonso IX\n")
 respuesta_3 = respuesta_3.upper()
-if respuesta_3 == "ALFONSO X":
+if respuesta_3 == "ALFONSO X" or "a":
     print ("Diste en el clavo, felicidades, superaste el test")
-elif respuesta_3 == "ALFONSO IX":
+elif respuesta_3 == "ALFONSO IX" or "c":
     print (f"Lo siento {nombre}, pero Alfonso IX no era la solución")
-elif respuesta_3 == "ALFONSO XI":
+elif respuesta_3 == "ALFONSO XI" or "b":
     print (f"Lo siento {nombre}, pero Alfonso XI no era la solución")
 else:
     print ("Responde una de esas opciones")
