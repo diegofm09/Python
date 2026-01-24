@@ -1,0 +1,10 @@
+nota = float(input("Para ver si obtienes tu beca, primero dime tu nota media:\n"))
+ingresos = float(input("Ahora necesito que me digas tus ingresos mensuales:\n"))
+if nota >= 9 or (nota >= 7 and ingresos < 1000):
+    print ("Felicidades, te mereces la beca")
+elif nota < 9 and nota >= 7 and ingresos > 1000:
+    print ("Lo siento, si tuvieses menos de 1000 de ingresos lo habrías conseguido, pero como tienes mas, necesitarias mas de un 9 para conseguirla")
+elif nota < 7 and ingresos < 1000:
+    print ("Lo siento, aunque tus ingresos sean menor que 1000, con esa nota no consigues la beca")
+else:
+    print ("Lo siento, no cumples con ninguna de las condiciones")

@@ -1,0 +1,7 @@
+edad = int(input("Hola, para entrar en la discoteca tienes que ser mayor de edad, cuantos años tienes: \n"))
+if edad >= 18 and edad <= 100:
+    print ("Perfecto, eres mayor de edad, pasa")
+elif edad < 18 and edad >= 1:
+    print ("Eres menor, no puedes pasar")
+elif edad < 1 or edad > 100:
+    print ("No creo que esa sea tu edad real")
