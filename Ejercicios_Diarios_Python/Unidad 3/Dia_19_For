@@ -1,0 +1,8 @@
+for i in range (5):
+    print ("Mira, empieza a contar desde 0")
+
+for i in range (0, 11, 1):
+    print (f"Numeros del 0 al 10: {i}")
+
+for i in range (15, -1, -3):
+    print (f"El valor del iterador es {i}")
