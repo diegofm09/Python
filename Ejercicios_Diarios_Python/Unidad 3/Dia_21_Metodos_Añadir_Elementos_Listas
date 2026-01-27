@@ -1,0 +1,16 @@
+marcas_coches = ["Audi", "Porsche", "Bugatti", "Aston Martin"]
+marcas_coches[2] = "Ferrari"
+print (marcas_coches)
+
+marcas_coches.insert(int(input("Dime el numero de la posicion donde agregar otra marca\n")) - 1, input("Dime la  marca que agregar\n"))
+print (marcas_coches)
+
+marcas_coches.append(input("Dime una marca de coches mas\n").capitalize())
+print (marcas_coches)
+
+marcas_coches_2 = ["Mclaren", "Bentley"]
+print(marcas_coches_2)
+
+marcas_coches.extend(marcas_coches_2)
+print (marcas_coches)
+
