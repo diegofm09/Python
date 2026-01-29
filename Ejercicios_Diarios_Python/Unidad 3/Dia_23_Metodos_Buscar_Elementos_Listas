@@ -1,0 +1,5 @@
+plantas = ["Bonsai", "Abeto", "Pino", "Amapolas", "Bonsai"]
+bonsai =  plantas.index("Bonsai")
+print (f"El primer bonsai esta  en el indice {bonsai}")
+total = plantas.count("Bonsai")
+print (f"Aunque en total, hay {total}, bonsais")
