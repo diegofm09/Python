@@ -1,0 +1,6 @@
+estaciones = ("Primavera", "Verano", "Otoño", "Invierno", "Verano")
+print (estaciones)
+print(type(estaciones))
+print (estaciones[1])
+print (estaciones.index("Verano"))
+print (estaciones.count("Primavera"))
