@@ -1,0 +1,8 @@
+vivienda = {
+    "superficie": 240,
+    "tipo": "chalet",
+    "localizacion": "Madrid",
+    "precio": 560_000,
+}
+
+print(f"La vivienda se encuentra en {vivienda['localizacion']}, es un {vivienda['tipo']} de {vivienda['superficie']} metros cuadrados y vale {vivienda['precio']} euros")
