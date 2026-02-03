@@ -1,0 +1,30 @@
+camiseta = {
+    "talla": "S",
+    "precio": 16,
+    "color": "blanco",
+    "estilo": "Slim",
+}
+
+print (f'Estas son las claves del diccionario {camiseta.keys()} y estos son sus valores {camiseta.values()}')
+
+poped = camiseta.pop("talla")
+print (f"\nHe eliminado la clave que contenia el siguiente valor: {poped}")
+print (camiseta)
+
+camiseta.popitem()
+print ("\nAhora he elminiado la ultima clave del diccionario")
+print (camiseta)
+
+camiseta2 = camiseta.copy()
+print ("\nAhora he duplicado este diccionario")
+print (camiseta2)
+
+print("\nAhora voy a intentar obtener el valor de una clave inexistente")
+print(camiseta.get("material", "Esta clave no existe"))
+
+print("\n Ahora al intentar acceder a una clave inexistente se creara una nueva con ese valor")
+camiseta.setdefault("Disponible", "Si")
+print (camiseta)
+
+print("\nAhora voy a crear una lista con tuplas de las claves y sus vlaores:")
+print(camiseta.items())
