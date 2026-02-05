@@ -1,2 +1,4 @@
-for i in range (5):
-    print ("Hola")
+coche = {1, 3, 5}
+hola = {9,3,7,}
+hola |= coche
+print (hola)
