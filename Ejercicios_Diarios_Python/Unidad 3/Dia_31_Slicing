@@ -1,0 +1,4 @@
+cadena = input("Dime una palabra que quieras cortar en partes\n")
+print (cadena[2:8:1])
+lista = ["comida", "limpieza", 234, "hipoteca", 1, 2342, 98173, "pepe"]
+print (lista[1:98:2])
