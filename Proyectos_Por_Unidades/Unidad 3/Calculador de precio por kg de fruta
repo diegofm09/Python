@@ -1,0 +1,13 @@
+frutas = {
+    "Platano": 1.35,
+    "Manzana": 0.8,
+    "Pera": 0.85,
+    "Naranja": 0.7,
+}
+print(f"Estas son las frutas que tenemos: \n {frutas.keys()}\n\n Estos son sus precios por kg:\n {frutas.values()}\n\n")
+compra = input("Cual fruta deseas comprar\n").capitalize()
+if compra not in frutas.keys():
+    print("Esa fruta no esta a la venta")
+else:
+    kg = float(input(("Cuantos kg quieres\n")))
+    print (f"El precio total sera de {kg*frutas[compra]} euros")
