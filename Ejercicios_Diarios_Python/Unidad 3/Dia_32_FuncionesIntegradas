@@ -1,0 +1,17 @@
+numeros = [23, 12, -19, 278.43, -1.76]
+nu1 = -23.46
+cadena = "Me llamo Diego"
+print (abs(nu1))
+
+print(len(numeros))
+print(len(cadena))
+
+print(sum(numeros))
+
+numeros_ordenados = sorted(numeros)
+print(numeros_ordenados)
+
+print(max(numeros))
+print(min(numeros))
+
+print(round(nu1, 1))
