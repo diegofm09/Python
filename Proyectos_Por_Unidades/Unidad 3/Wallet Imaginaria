@@ -1,0 +1,10 @@
+eth = [1.2, 0.5, 3.8, 0.5, 1.1, 4.2, 0.5]
+print (f"Esta es tu cartera de ethereum:\n {eth}")
+print (f"Tu valor máximo es el {max(eth)} y el menor es el {min(eth)}")
+print(f"De promedio tienes un total de {round(sum(eth)/len(eth), 3)} ethereum")
+print (f"Has adquirido un total de {eth.count(0.5)} veces 0.5")
+eth_ord = sorted(eth, reverse = True)
+print (f"Estos son tus criptomonedas ordenadas:\n {eth_ord}")
+primero = (eth[0], )
+ultimo = (eth [-1], )
+print (f"El primer valor de la wallet original era {primero[0]} y el ultimo era {ultimo[0]}")
