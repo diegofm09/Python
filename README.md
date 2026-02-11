@@ -18,5 +18,5 @@
 
 ---
 
-**Desarrollado por:** Diego FM  
+**Desarrollado por:** Diego Fernández Mendoza  
 📧 [diegofermend@gmail.com](mailto:diegofermend@gmail.com)
