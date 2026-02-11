@@ -15,3 +15,8 @@
 ## 📈 Mi Progreso
 * **Unidad Actual:** Unidad 3 - Colecciones de Datos.
 * **Estado:** Aprendiendo y mejorando cada día.
+
+---
+
+**Desarrollado por:** Diego FM  
+📧 [diegofermend@gmail.com](mailto:diegofermend@gmail.com)
