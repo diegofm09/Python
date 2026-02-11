@@ -1,0 +1,13 @@
+caracteristicas_a = {"256GB", "Bluetooth", "HDMI"}
+caracteristicas_b = {"512GB", "Bluetooth", "USB"}
+print (f"Tiene el dispositivo a 256GB:\n {'256GB' in caracteristicas_a}\n Y la tiene el dispositivo b:\n {'256' in caracteristicas_b}")
+caracteristicas_c = caracteristicas_a|caracteristicas_b
+caracteristicas_c.discard("256GB")
+print (f'El dispositivo c tiene todas las caracteristicas de la union del a y el b:\n {caracteristicas_c}')
+print (f"Lo que comparten el dispositivo a y el b es {caracteristicas_a&caracteristicas_b} ")
+print(f"Lo que tiene el producto a, que el b no tiene es:\n{caracteristicas_a.difference(caracteristicas_b)}")
+print(f"Lo que tiene el producto b, que el a no tiene es:\n{caracteristicas_b-caracteristicas_a}")
+print (f"Lo que ambos, producto a y b tienen que no tienen los 2 es lo siguiente:\n {caracteristicas_a^caracteristicas_b} ")
+print (f"Tiene el dispositivo c todas las caracteristicas del dispositivo b:\n {caracteristicas_c.issuperset(caracteristicas_b)}")
+print (f"Todas las caracteristicas del dispositivo a estan en el c: \n {caracteristicas_a.issubset(caracteristicas_c)}")
+print (f"Los dos dispositivos tienen caracteristicas completamente distintas:\n {caracteristicas_a.isdisjoint(caracteristicas_b)}")
