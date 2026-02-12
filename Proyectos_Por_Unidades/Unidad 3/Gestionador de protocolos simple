@@ -1,0 +1,12 @@
+protocolos = {
+    "Uniswap": {"version": "V3.0", "estado": "activo",},
+    "Aave": {"version": "V2.5", "estado": "activo"},
+    "Compound": {"version": "V1.0", "estado": "inactivo"},
+    }
+print(f'La version actual de Uniswap es {protocolos["Uniswap"]["version"]}')
+protocolos["Aave"]["estado"] = "inactivo"
+print(f'El estado de Aave acaba de cambiar, ahora su estado se encuentra {protocolos["Aave"]["estado"]}')
+protocolos["Maker"] = {"version": "V3.1", "estado": "activo",}
+print (f'Se ha añadido un nuevo protocolo:\n Maker: {protocolos["Maker"]}')
+nombres_protocolos = list(protocolos.keys())
+print (f'En resumen, aqui tienes una lista con los nombres de los protocolos disponibles:\n {nombres_protocolos}')
