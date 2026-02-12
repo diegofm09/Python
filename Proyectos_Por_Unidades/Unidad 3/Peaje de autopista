@@ -1,0 +1,23 @@
+nombre = input("Bienvenido, antes de continuar digame su nombre\n")
+distancia = float(input("Introduce la distancia que has recorrido en Km\n"))
+vehiculo = int(input("Introduce el tipo de vehiculo que conduces\n(0): Moto\n(1): Coche\n(2): Camión\n"))
+print ("El coste base por Km es de 20 centimos, los coches pagan un 20% mas y los camiones un 50% mas, si has recorrido mas de 500km o el coste supera los 100 euros, te consideras premium asi que te descontamos 5 euros")
+matriculas_capt = ["ABB12", "CXY99", "ABB12", "TTR44", "CXY99"]
+matr = set(matriculas_capt)
+areas = ("Puebla", "Rio", "Montaña")
+coste = distancia*0.20
+premium = False
+if vehiculo == 1:
+    coste += coste*0.20
+elif vehiculo == 2:
+    coste += coste*0.50
+if distancia > 500 or coste > 100:
+    coste -= 5
+    premium = True
+final = {
+    "nombre": nombre,
+    "precio": round(coste, 2),
+    "premium": premium,
+}
+codigo = nombre[0:4]
+print(f'Tu codigo es:\n{codigo}\nEl coste a pagar es de un total de {final["precio"]} euros\nHoy han pasado un total de {len(matr)} vehiculos distintos\nLa segunda area de servicio es {areas[1]}')
