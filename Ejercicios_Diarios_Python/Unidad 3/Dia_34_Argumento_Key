@@ -1,0 +1,9 @@
+precio = [234, 782, -102, 812, -927]
+print(max(precio, key=abs))
+print (sorted(precio, reverse = True))
+frutas = ["manzana", "pera", "banana", "naranja", "sandia"]
+print(sorted(frutas, key=len))
+apps = ["Calculadora", "zoom",  "Notas", "reloj", "Fotos", "ajustes"]
+apps_orden = sorted(apps, key=str.lower)
+apps_orden = sorted(apps_orden, key=len)
+print(apps_orden)
