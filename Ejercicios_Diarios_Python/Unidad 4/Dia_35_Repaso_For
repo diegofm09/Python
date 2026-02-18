@@ -1,0 +1,16 @@
+numeros = list(range(10))
+for numero in numeros:
+    print(numero)
+print("\n")
+
+for i in range (0,78, 11):
+    print(i)
+print ("\n")
+
+for i in range (-4, 5):
+    print (i)
+print("\n")
+
+precios = {"pera": 1.2, "manzana": 2.3, "mandarina": 1.7}
+for fruta in precios:
+    print(precios[fruta])
