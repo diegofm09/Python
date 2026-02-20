@@ -1,0 +1,7 @@
+frutas = ["manzana", "pera", "platano", "naranja"]
+
+print("---LISTA DE FRUTAS---")
+for fruta in frutas:
+    if fruta == "pera":
+        continue
+    print(f"{(frutas.index(fruta))+1}) {fruta}")
