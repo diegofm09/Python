@@ -1,0 +1,12 @@
+numero = int(input("Dime un numero\n"))
+while True:
+    print(f"El numero es el {numero}")
+    numero += 1
+    if numero >= 10:
+      break
+
+for i in range(5):
+  print(i)
+else:
+  print("Saliste del bucle")
+
