@@ -1,0 +1,7 @@
+animales = ["leon", "tigre", "gorila", "serpiente", "perro"]
+print(animales)
+for posicion, animal in enumerate(animales, start = 200):
+    print(f"Posicion {posicion}: {animal}")
+
+enumerado = list(enumerate(animales, start=1))
+print(enumerado)
