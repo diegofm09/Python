@@ -43,7 +43,7 @@ while True:
                 numero_compras = 0
                 print(f"No tienes suficiente dinero, te faltan {precio-presupuesto} euros\nSe ha vaciado el carrito, por favor, empiece de nuevo la compra")
         case "5":
-            print("Saliste del programa")
+            print("Saliste del programa con exito")
             break
         case _:
             print("Esta opcion no esta dentro del menu, seleccione otra")
