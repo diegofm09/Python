@@ -1,0 +1,7 @@
+valores = [1, 2, 2, 3, 4, 5, 5, 6,]
+valores_no_repetidos = {i**2 for i in valores if i%2 != 1}
+print(valores_no_repetidos)
+
+nombres = ["ana", "PeDro", "PablO", "iKer", "ANA", "Pablo"]
+nombres_sin_repetir = {i.capitalize() for i in nombres}
+print(nombres_sin_repetir)
