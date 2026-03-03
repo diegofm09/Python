@@ -1,0 +1,10 @@
+provincias = {"Salamanca": 12, "Leon": 10, "Avila": 22, "Sevilla": 30, "Asturias": 6}
+temperatura = {ciudad: round((t*1.3), 2) for (ciudad, t) in provincias.items() if t>11}
+print(temperatura)
+
+desc_t = {ciudad: "Frio" if t<15 else "Calor" for (ciudad,t) in provincias.items()}
+print(desc_t)
+
+notas = {"Juan": 3.4, "Natalia": 9.8, "Diego": 7.9, "Pablo": 2.3, "Iker": 5, "Sergio": -1}
+aprobados = {nombre: "Aprobado" if nota>=5 else "Suspenso" for (nombre, nota) in notas.items() if nota >= 0 and nota<=10}
+print(aprobados)
