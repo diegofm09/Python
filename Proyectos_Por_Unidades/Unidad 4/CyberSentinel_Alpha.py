@@ -27,7 +27,7 @@ historial_incidentes = [
 print(f"Ultimos incidentes registrados\n {historial_incidentes[-3:]}")
 
 while True:
-    print("Menu:\n 1) Listar amenazas\n 2) Analizar nivel riesgo medio\n 3) Filtrar ataques criticos\n 4) Mostrar IPs unicas\n 5) Simulacro de crisis\n 6) Consultar estado del sistema\n 7) Salir")
+    print("Menu:\n 1) Listar amenazas\n 2) Analizar nivel riesgo medio\n 3) Filtrar ataques criticos\n 4) Mostrar IPs unicas\n 5) Simulacro de crisis\n 6) Consultar estado del sistema\n 7) Mostrar protocolos de red permitidos\n 8) Salir")
     opcion_menu = input("Selecciona la opcion del menu que quieras\n")
     match opcion_menu:
         case "1":
@@ -72,8 +72,14 @@ while True:
             print(f"La suma de todos los valores de riesgo es de {suma_valores_riesgo}")
             print("Todo esta bajo control" if suma_valores_riesgo<20 else "Alerta, riesgo demasiado alto")
             print("--------------------")
-        
+
         case "7":
+            print("--------------------")
+            for posicion, protocolo in enumerate(protocolos_de_red, start=1):
+                print(f"{posicion}) {protocolo}")
+            print("--------------------")
+        
+        case "8":
             print("--------------------")
             print("Saliste con exito del programa")
             print("--------------------")
