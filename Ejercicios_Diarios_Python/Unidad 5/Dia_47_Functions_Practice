@@ -1,0 +1,26 @@
+def sec_password(password):
+    secure = False
+    total_upper = 0
+    total_numbers = 0
+    if len(password)>8:
+        length = True
+    else:
+        length = False
+    for char in password:
+        if char.isupper():
+            char = True
+            break
+        else:
+            char = False
+    for numb in password:
+        if numb.isdigit():
+            digit = True
+            break
+        else:
+            digit = False
+    secure = "Secure" if char and digit and length else "Unsecure"
+    return secure
+
+result = sec_password(input("Write your password\n"))
+print (f"Your password is {result}")
+        
