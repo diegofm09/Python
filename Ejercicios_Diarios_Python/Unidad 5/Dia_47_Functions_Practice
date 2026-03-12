@@ -6,6 +6,10 @@ def sec_password(password):
         length = True
     else:
         length = False
+    if not password.isalnum():
+        special_char = True
+    else:
+        special_char = False
     for char in password:
         if char.isupper():
             char = True
@@ -18,7 +22,7 @@ def sec_password(password):
             break
         else:
             digit = False
-    secure = "Secure" if char and digit and length else "Unsecure"
+    secure = "Secure" if char and digit and length and special_char else "Unsecure"
     return secure
 
 result = sec_password(input("Write your password\n"))
