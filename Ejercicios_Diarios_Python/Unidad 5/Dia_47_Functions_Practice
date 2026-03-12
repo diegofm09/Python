@@ -1,7 +1,5 @@
 def sec_password(password):
     secure = False
-    total_upper = 0
-    total_numbers = 0
     if len(password)>8:
         length = True
     else:
