@@ -5,6 +5,9 @@ for i in range(8):
     pass
 if 8==8:
     pass
+match i:
+    case 1:
+        pass
 
 x = 40
 def global_function():
