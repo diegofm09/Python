@@ -1,0 +1,11 @@
+def generate_numbers():
+    num = 0
+    while True:
+        yield num
+        num+=1
+number = generate_numbers()
+print(next(number))
+print("Write anything to show the next number")
+while True:
+    word = input("")
+    print(next(number))
