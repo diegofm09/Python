@@ -1,0 +1,25 @@
+def generator():
+    yield 1
+    yield 2
+    yield 3
+for number in generator():
+    print(number)
+
+def prime_numbers(start, end):
+    primes = []
+    for num in range(start, end + 1):
+        if num < 2:
+            continue
+        is_prime = True
+        for i in range (2, num):
+            if num%i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(num)
+            yield num
+prime_num = prime_numbers(0,10000)
+while True:
+    x = input("Press anything to show a prime number\n")
+    print(next(prime_num))
+    
