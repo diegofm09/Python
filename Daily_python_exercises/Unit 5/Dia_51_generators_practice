@@ -1,0 +1,38 @@
+#Length fliter
+names = ["Ana", "Sebastian", "Luz", "Roberto", "Ian"]
+def add_exclamation(names_list):
+    for name in names_list:
+        name += "!"
+        yield name
+exclamations = add_exclamation(names)
+
+def less_than_six(names):
+    for name in names:
+        if len(name) < 6:
+            yield name
+length = less_than_six(exclamations)
+
+def upper_chars(names):
+    for name in names:
+        yield name.upper()
+
+upper_names = upper_chars(length)
+
+for i in upper_names:
+    print (i)
+
+
+#Fibonacci sequence
+def fibonacci_gen():
+    num1 = 0
+    num2 = 1
+    num3 = num1+num2
+    while True:
+        yield num3
+        num1 = num2
+        num2 = num3
+        num3 = num1+num2
+number = fibonacci_gen()
+while True:
+    x = input("Press anything to show the next fibonacci number\n")
+    print(next(number))
