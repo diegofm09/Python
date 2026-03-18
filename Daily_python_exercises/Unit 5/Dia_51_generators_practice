@@ -1,3 +1,14 @@
+#Echo generator
+word = input("Say a word and it will have echo\n")
+def echo(word):
+    n = ""
+    for letter in word:
+        n += letter
+        yield n
+echoed = echo(word)
+for i in echoed:
+    print(i)
+
 #Length fliter
 names = ["Ana", "Sebastian", "Luz", "Roberto", "Ian"]
 def add_exclamation(names_list):
