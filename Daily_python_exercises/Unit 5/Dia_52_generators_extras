@@ -1,0 +1,39 @@
+#Using list(function)
+def numbers():
+    yield from range(1,11)
+
+number = numbers()
+print(next(number))
+print(next(number))
+print(next(number))
+print(next(number))
+print(next(number))
+print(list(number))
+
+#yield from
+def numbers_to_100():
+    for i in range (100, 111):
+        yield i
+
+def generator():
+    yield from numbers()
+    print("Next generator:")
+    yield from numbers_to_100()
+
+final_generator = generator()
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
+print(next(final_generator))
