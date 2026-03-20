@@ -8,6 +8,7 @@ print(next(number))
 print(next(number))
 print(next(number))
 print(next(number))
+print(next(number))
 print(list(number))
 
 #yield from
