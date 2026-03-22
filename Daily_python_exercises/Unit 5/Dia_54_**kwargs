@@ -1,0 +1,12 @@
+def coffee_order(customer_name, coffee_type, *add, **extras):
+    print(f"{customer_name}: {coffee_type}")
+    for additions in add:
+        print(f" - Add {additions}")
+    for extra, specification in extras.items():
+        print(f" - {extra}: {specification}")
+
+coffee_order("Diego", "Machiato","chocolate", "cinnamon", Sweetener="honey", topping="Oreo" )
+
+olivias_adds = ("sugar", "vanilla", "butter")
+olivias_extras = {"Milk": "Almond"}
+coffee_order("Olivia", "Dark cofee", *olivias_adds, **olivias_extras)
