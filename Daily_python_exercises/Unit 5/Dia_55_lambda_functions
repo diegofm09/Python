@@ -1,0 +1,10 @@
+power = lambda x,y: x**y
+print(power(2,3))
+
+num_list = [3,6,]
+def transformed_list(trans_list, function_applyed):
+    transformed_0 = function_applyed(trans_list[0])
+    transformed_1 = function_applyed(trans_list[1])
+    return [transformed_0, transformed_1]
+print(transformed_list(num_list, lambda x: x**2))
+print(transformed_list(num_list, lambda x: x**4))
