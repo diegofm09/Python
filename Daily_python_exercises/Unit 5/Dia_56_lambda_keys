@@ -1,0 +1,12 @@
+points = [
+    {"Name": "Juan", "Points": 500},
+    {"Name": "Ana", "Points": 1200},
+    {"Name": "Diego", "Points": 800}
+    ]
+mayor_puntos = sorted(points, key= lambda person: -person["Points"])
+print(mayor_puntos)
+
+
+dates = [(25, 12, 2024), (10, 1, 2023), (15, 5, 2025), (1, 1, 2022)]
+dates.sort(key=lambda x: x[2])
+print(dates)
