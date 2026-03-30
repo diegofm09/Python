@@ -1,0 +1,21 @@
+#sorting words based on their last letter
+colors = ["red", "blue", "green", "yellow", "white", "black"]
+sorted_colors = sorted(colors, key=lambda x: x[-1])
+print(sorted_colors)
+print("\n")
+
+#sorting a dictionary based on their values
+inventory = [
+    {"item": "sword", "power": 45},
+    {"item": "shield", "power": 30},
+    {"item": "potion", "power": 10},
+    {"item": "amulet", "power": 55}
+]
+inventory_sorted = sorted(inventory, key=lambda x: x["power"], reverse=True)
+print(inventory_sorted)
+print("\n")
+
+#sorting a list of tuples with 2 criterias
+runners = [("Marcos", 120), ("Ana", 115), ("Zoe", 120), ("Dani", 110)]
+sorted_runners = sorted(runners, key= lambda x: (-x[1], x[0]))
+print(sorted_runners)
