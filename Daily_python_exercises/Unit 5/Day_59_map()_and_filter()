@@ -1,0 +1,23 @@
+#map()
+texts = ["apple", "lion", "tiger", "school"]
+def uppercase(word):
+    if word.isupper():
+        word = word
+    else:
+        word = word.upper()
+    return word
+uppercase_texts = list(map(uppercase, texts))
+print (uppercase_texts)
+
+
+#filter()
+nums = [2, 4, 5, 7, 8, 9, 10, 11, 12, 14]
+def only_odds(num):
+    odd = False
+    if num%2 == 0:
+        return False
+    else:
+        return True
+
+odd_nums = list(filter(only_odds, nums))
+print(odd_nums)
