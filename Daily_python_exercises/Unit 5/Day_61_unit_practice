@@ -21,3 +21,20 @@ print(list(next_item))
 
 
 #args and kwargs
+def super_info(*sum_nums, **data):
+    print(f"The sum of all the nums is {sum(sum_nums)}")
+    for word, thing in data.items():
+        print(f" - {word} --> {thing}")
+super_info(2,3,6,8,10,23,14,name="Ana", age = 28, country = "USA")
+
+
+#lambda
+is_large = lambda x: x>100
+print(is_large(189))
+print(is_large(67))
+
+
+#lambda keys
+products = [("Laptop", 1200), ("Mouse", 25), ("Keyboard", 80)]
+sorted_products = sorted(products, key = lambda x: x[1], reverse=True )
+print(sorted_products)
