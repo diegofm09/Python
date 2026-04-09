@@ -25,8 +25,8 @@ stock = {
 
 alchemy_laws = (
     "No experimentation with humans",
-    "Do Not Create Gold"
-    "Respect the Master"
+    "Do Not Create Gold",
+    "Respect the Master",
 )
 
 print("What 5 materials do you want to introduce to the stock?:")
@@ -45,3 +45,50 @@ while True:
     print("  -----------  ")
     if limit == 5:
         break
+
+print("Great, entering The Hub")
+while True: 
+    print("  -----------  ")
+    the_hub_selection = input("Select an option:\n 1) Inventory\n 2) Alchemy Laws\n 3) Brewing Room\n 4) Laboratory Audit\n 5) Recipe Management\n 6) Exit The Hub\n")
+    print("  -----------  ")
+    match the_hub_selection:
+        case "1":
+            print("Stock:")
+            enumerate_iterable(stock)
+
+        case "2":
+            print("Alchemy Laws:")
+            enumerate_iterable(alchemy_laws)
+    
+        case "3":
+            print("Entering Brewing Room:")
+            while True:
+                print("  -----------  ")
+                brewing_room_selection = input("Brewing Room\n Select an option\n  1) Massive Transmutation\n  2) Energy Creator\n  3) Safety Check\n  4) Exit Brewing Room\n")
+                match brewing_room_selection:
+                    case "1":
+                        pass
+
+                    case "2":
+                        pass
+
+                    case "3":
+                        pass
+
+                    case "4":
+                        print("  -----------  ")
+                        print("Exiting Brewing Room")
+                        break
+
+        case "4":
+            pass
+
+        case "5":
+            pass
+
+        case "6":
+            print("Exiting The Hub")
+            exit()
+
+        case _:
+            print("Error, option not avaiable")
