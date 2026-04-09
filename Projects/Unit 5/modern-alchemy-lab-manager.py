@@ -48,9 +48,11 @@ while True:
 
 print("Great, entering The Hub")
 while True: 
+
     print("  -----------  ")
     the_hub_selection = input("Select an option:\n 1) Inventory\n 2) Alchemy Laws\n 3) Brewing Room\n 4) Laboratory Audit\n 5) Recipe Management\n 6) Exit The Hub\n")
     print("  -----------  ")
+
     match the_hub_selection:
         case "1":
             print("Stock:")
@@ -65,6 +67,7 @@ while True:
             while True:
                 print("  -----------  ")
                 brewing_room_selection = input("Brewing Room\n Select an option\n  1) Massive Transmutation\n  2) Energy Creator\n  3) Safety Check\n  4) Exit Brewing Room\n")
+                
                 match brewing_room_selection:
                     case "1":
                         pass
