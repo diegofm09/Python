@@ -16,6 +16,9 @@ def enumerate_iterable(iterable):
         for position, item_contained in enumerate(iterable, start = 1):
             print(f"{position}) {item_contained} ")
 
+def add_energy(energy):
+    return energy + 20
+
 stock = {
     "Gold": 9,
     "Iron": 13,
@@ -45,7 +48,8 @@ while True:
     print("  -----------  ")
     if limit == 5:
         break
-
+massive_transmutation_uses = 0
+current_energy = 0
 print("Great, entering The Hub")
 while True: 
 
@@ -66,14 +70,34 @@ while True:
             print("Entering Brewing Room:")
             while True:
                 print("  -----------  ")
-                brewing_room_selection = input("Brewing Room\n Select an option\n  1) Massive Transmutation\n  2) Energy Creator\n  3) Safety Check\n  4) Exit Brewing Room\n")
+                brewing_room_selection = input("Brewing Room:\n Select an option\n  1) Massive Transmutation\n  2) Energy Creator\n  3) Safety Check\n  4) Exit Brewing Room\n")
                 
                 match brewing_room_selection:
                     case "1":
-                        pass
+                        if massive_transmutation_uses==0:
+                            stock = {element: cuantity*3 for (element, cuantity) in stock.items()}
+                            massive_transmutation_uses = 1
+                            enumerate_iterable(stock)
+                        else:
+                            print("  -----------  ")
+                            print("You have already used massive transmutation once")
 
                     case "2":
-                        pass
+                        while True:
+                            print(f"Energy Creator:\n Current energy: {current_energy}")
+                            energy_creator_selection = input("  Press 1 to add 20 energy\n  Press 2 to exit Energy Creator\n")
+                            if energy_creator_selection == "2":
+                                break
+                            elif energy_creator_selection=="1":
+                                if current_energy == 100:
+                                    print("  -----------  ")
+                                    print("Error, Energy at maximum capacity")
+                                else:
+                                    current_energy = min(100, add_energy(current_energy))
+                                print("  -----------  ")
+                            else:
+                                print("Error, option not avaiable")
+                                print("  -----------  ")
 
                     case "3":
                         pass
