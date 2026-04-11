@@ -23,7 +23,9 @@ stock = {
     "Gold": 9,
     "Iron": 13,
     "Uranium": 4,
-    "Plutonium": 6
+    "Plutonium": 6,
+    "Calcium": 15,
+    "Carbon": 10,
 }
 
 alchemy_laws = (
@@ -31,6 +33,15 @@ alchemy_laws = (
     "Do Not Create Gold",
     "Respect the Master",
 )
+
+potions = [
+    {"name": "Dragon Killer", "power": 120},
+    {"name": "Love Shot", "power": 30},
+    {"name": "Angelical Water", "power": 75},
+    {"name": "Nuclear Posion", "power": 90},
+    {"name": "Gods Tears", "power": 150},
+    {"name": "Hell Blood", "power": 50},
+]
 
 print("What 5 materials do you want to introduce to the stock?:")
 limit = 0
@@ -75,6 +86,8 @@ while True:
                 match brewing_room_selection:
                     case "1":
                         if massive_transmutation_uses==0:
+                            print("  -----------  ")
+                            print("Doing a massive transmutation, result:")
                             stock = {element: cuantity*3 for (element, cuantity) in stock.items()}
                             massive_transmutation_uses = 1
                             enumerate_iterable(stock)
@@ -100,7 +113,8 @@ while True:
                                 print("  -----------  ")
 
                     case "3":
-                        pass
+                        print("Laboratory state:")
+                        print("SAFE" if sum(stock.values())%2==0 else "UNSAFE")
 
                     case "4":
                         print("  -----------  ")
@@ -111,7 +125,25 @@ while True:
             pass
 
         case "5":
-            pass
+            print("Entering Recipe Managment:")
+            while True:
+                print("  -----------  ")
+                recipe_managment_selection = input("Recipe Managment:\n Select an option\n  1) Potions list\n  2) Master Sort\n  3) New Potion\n  4) The Essence Filter\n  5) Exit Recipe Managment\n")
+                match recipe_managment_selection:
+                    case "1":
+                        pass
+
+                    case "2":
+                        pass
+
+                    case "3":
+                        pass
+
+                    case "4":
+                        pass
+
+                    case "5":
+                        pass
 
         case "6":
             print("Exiting The Hub")
