@@ -14,7 +14,12 @@ def enumerate_iterable(iterable):
             print(f"{position}) {keyword}: {item_contained} ")
     else:
         for position, item_contained in enumerate(iterable, start = 1):
-            print(f"{position}) {item_contained} ")
+            if isinstance(item_contained, dict):
+                name = item_contained.get("name", "Unknown")
+                power = item_contained.get("power", "??")
+                print(f"{position}) {name}, Power: {power}")
+            else:
+                print(f"{position}) {item_contained} ")
 
 def add_energy(energy):
     return energy + 20
@@ -131,10 +136,14 @@ while True:
                 recipe_managment_selection = input("Recipe Managment:\n Select an option\n  1) Potions list\n  2) Master Sort\n  3) New Potion\n  4) The Essence Filter\n  5) Exit Recipe Managment\n")
                 match recipe_managment_selection:
                     case "1":
-                        pass
+                        print("Potions List:")
+                        enumerate_iterable(potions)
 
                     case "2":
-                        pass
+                        print("  -----------  ")
+                        print("Sorting Potions...")
+                        potions = sorted(potions, key= lambda x: x["power"], reverse=True)
+                        enumerate_iterable(potions)
 
                     case "3":
                         pass
