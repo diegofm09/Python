@@ -150,7 +150,7 @@ while True:
                         pass
 
                     case "4":
-                        #Hacer estas 2 cosas con higher order functions
+                        #Hacer estas 2 cosas con higher order functionsw
                         print("Potions Names:")
                         enumerate_iterable(potions_names)
                         
@@ -161,8 +161,6 @@ while True:
                                 high_power_potions.append(potion["name"])
                         print(f"Potions with higher power than {minimum_power}:")
                         enumerate_iterable(high_power_potions)
-                        
-
 
                     case "5":
                         pass
