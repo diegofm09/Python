@@ -23,7 +23,7 @@ def enumerate_iterable(iterable):
 
 def add_energy(energy):
     return energy + 20
-
+    
 stock = {
     "Gold": 9,
     "Iron": 13,
@@ -47,6 +47,7 @@ potions = [
     {"name": "Gods Tears", "power": 150},
     {"name": "Hell Blood", "power": 50},
 ]
+potions_names = [i["name"].upper() for i in potions]
 
 print("What 5 materials do you want to introduce to the stock?:")
 limit = 0
@@ -149,7 +150,19 @@ while True:
                         pass
 
                     case "4":
-                        pass
+                        #Hacer estas 2 cosas con higher order functions
+                        print("Potions Names:")
+                        enumerate_iterable(potions_names)
+                        
+                        minimum_power = int(input("What minimum power level do you want to see the potions with:\n"))
+                        high_power_potions = []
+                        for potion in potions:
+                            if potion["power"]>minimum_power:
+                                high_power_potions.append(potion["name"])
+                        print(f"Potions with higher power than {minimum_power}:")
+                        enumerate_iterable(high_power_potions)
+                        
+
 
                     case "5":
                         pass
