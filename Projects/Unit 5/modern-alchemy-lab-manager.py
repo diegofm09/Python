@@ -23,6 +23,20 @@ def enumerate_iterable(iterable):
 
 def add_energy(energy):
     return energy + 20
+
+def add_potion(name, power, *extras, **details):
+    global potions
+    new_potion = {"name": name, "power": power}
+    potions.append(new_potion) 
+    print(f"{name} added sucesfull to potions list:")
+    print(f" Power: {power}")
+    if extras:
+        for i in extras:
+            print(f" - Add {i}")
+    if details:
+        for (x,y) in details.items():
+            print(f" - {x}: {y}")
+
     
 stock = {
     "Gold": 9,
@@ -147,23 +161,31 @@ while True:
                         enumerate_iterable(potions)
 
                     case "3":
-                        pass
+                        new_potion_name = input("What do you want to call the new potion:\n")
+                        new_potion_power = 0
+                        while True:
+                            new_potion_power = int(input("What power do you want to give the potion:\n"))
+                            new_potion_power = new_potion_power if new_potion_power<500 and new_potion_power>0 else 0
+                            if new_potion_power > 0:
+                                break
+                            else:
+                                print("Error, the potion power must be between 0 and 500")
+                        #poner aqui los extras y details
+                        print("  -----------  ")
+                        add_potion(new_potion_name, new_potion_power)
 
                     case "4":
-                        #Hacer estas 2 cosas con higher order functionsw
                         print("Potions Names:")
                         enumerate_iterable(potions_names)
                         
                         minimum_power = int(input("What minimum power level do you want to see the potions with:\n"))
-                        high_power_potions = []
-                        for potion in potions:
-                            if potion["power"]>minimum_power:
-                                high_power_potions.append(potion["name"])
-                        print(f"Potions with higher power than {minimum_power}:")
+                        high_power_potions = filter(lambda x: True if x["power"]>minimum_power else False, potions)
                         enumerate_iterable(high_power_potions)
 
                     case "5":
-                        pass
+                        print("  -----------  ")
+                        print("Exiting Recipe Managment")
+                        break
 
         case "6":
             print("Exiting The Hub")
