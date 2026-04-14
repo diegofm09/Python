@@ -47,7 +47,7 @@ potions = [
     {"name": "Gods Tears", "power": 150},
     {"name": "Hell Blood", "power": 50},
 ]
-potions_names = [i["name"].upper() for i in potions]
+potions_names = list(map(lambda x: x["name"].upper(), potions))
 
 print("What 5 materials do you want to introduce to the stock?:")
 limit = 0
