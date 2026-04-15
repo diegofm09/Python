@@ -28,14 +28,14 @@ def add_potion(name, power, *extras, **details):
     global potions
     new_potion = {"name": name, "power": power}
     potions.append(new_potion) 
-    print(f"{name} added sucesfull to potions list:")
+    print(f"{name.upper()} added sucesfully to potions list:")
     print(f" Power: {power}")
     if extras:
         for i in extras:
-            print(f" - Add {i}")
+            print(f" - Add {i.capitalize()}")
     if details:
         for (x,y) in details.items():
-            print(f" - {x}: {y}")
+            print(f" - {x.capitalize()}: {y.capitalize()}")
 
     
 stock = {
@@ -170,9 +170,20 @@ while True:
                                 break
                             else:
                                 print("Error, the potion power must be between 0 and 500")
-                        #poner aqui los extras y details
+                        new_potion_extra_materials = []
+                        while True:
+                            extra_material_selection = input("Do you want to add some special material to the potion?\n 1) Yes\n 2) No\n")
+                            match extra_material_selection:
+                                case "1":
+                                    new_potion_extra_materials.append(input("What material do you want to add\n"))
+
+                                case "2":
+                                    break
+
+                                case _:
+                                    print("Error, please enter either 1 or 2")
                         print("  -----------  ")
-                        add_potion(new_potion_name, new_potion_power)
+                        add_potion(new_potion_name, new_potion_power, *new_potion_extra_materials)
 
                     case "4":
                         print("Potions Names:")
