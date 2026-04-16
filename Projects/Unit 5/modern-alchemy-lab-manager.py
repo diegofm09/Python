@@ -142,7 +142,7 @@ while True:
                         break
 
         case "4":
-            pass
+            print(f"The Stock has a total of {sum(stock.values())} units")
 
         case "5":
             print("Entering Recipe Managment:")
@@ -163,6 +163,7 @@ while True:
                     case "3":
                         new_potion_name = input("What do you want to call the new potion:\n")
                         new_potion_power = 0
+
                         while True:
                             new_potion_power = int(input("What power do you want to give the potion:\n"))
                             new_potion_power = new_potion_power if new_potion_power<500 and new_potion_power>0 else 0
@@ -170,20 +171,34 @@ while True:
                                 break
                             else:
                                 print("Error, the potion power must be between 0 and 500")
+
                         new_potion_extra_materials = []
                         while True:
                             extra_material_selection = input("Do you want to add some special material to the potion?\n 1) Yes\n 2) No\n")
                             match extra_material_selection:
                                 case "1":
                                     new_potion_extra_materials.append(input("What material do you want to add\n"))
-
                                 case "2":
                                     break
-
                                 case _:
                                     print("Error, please enter either 1 or 2")
                         print("  -----------  ")
-                        add_potion(new_potion_name, new_potion_power, *new_potion_extra_materials)
+
+                        new_potion_details = {}
+                        while True:
+                            detail_selection = input("Do you want to specify some details of the potion?\n 1) Yes\n 2) No\n")
+                            match detail_selection:
+                                case "1":
+                                    new_potion_details_key = input("What do you want to specify?\n  Example --> Color, temperature...\n")
+                                    new_potion_details_value = input("What do you want it to be\n  Example --> Purple, hot...\n")
+                                    new_potion_details[new_potion_details_key.capitalize()] = new_potion_details_value.capitalize()
+                                case "2":
+                                    break
+                                case _:
+                                    print("Error, please enter either 1 or 2")
+                        print("  -----------  ")
+
+                        add_potion(new_potion_name, new_potion_power, *new_potion_extra_materials, **new_potion_details)
 
                     case "4":
                         print("Potions Names:")
