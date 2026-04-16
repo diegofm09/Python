@@ -1,7 +1,9 @@
+logs = []
 master_name = "Diego"
 student_name = input("Whats your student name:\n").capitalize()
 student_age = int(input("How old are you:\n"))
 acces_granted = True if student_name==master_name or student_age>=18 else False
+logs.append("Entered the system")
 
 if not acces_granted:
     print("You dont meet the conditions for entry, sorry")
@@ -81,7 +83,10 @@ while True:
         break
 massive_transmutation_uses = 0
 current_energy = 0
+logs.append("Added materials to the stock")
+
 print("Great, entering The Hub")
+logs.append("Entered The Hub")
 while True: 
 
     print("  -----------  ")
@@ -92,12 +97,15 @@ while True:
         case "1":
             print("Stock:")
             enumerate_iterable(stock)
+            logs.append("Checked the Stock")
 
         case "2":
             print("Alchemy Laws:")
             enumerate_iterable(alchemy_laws)
+            logs.append("Checked alchemy laws")
     
         case "3":
+            logs.append("Entered Brewing Room")
             print("Entering Brewing Room:")
             while True:
                 print("  -----------  ")
@@ -111,6 +119,7 @@ while True:
                             stock = {element: cuantity*3 for (element, cuantity) in stock.items()}
                             massive_transmutation_uses = 1
                             enumerate_iterable(stock)
+                            logs.append("Massive Transmutation")
                         else:
                             print("  -----------  ")
                             print("You have already used massive transmutation once")
@@ -131,20 +140,42 @@ while True:
                             else:
                                 print("Error, option not avaiable")
                                 print("  -----------  ")
+                            logs.append("Energy Creation")
 
                     case "3":
                         print("Laboratory state:")
                         print("SAFE" if sum(stock.values())%2==0 else "UNSAFE")
+                        logs.append("Checked Laboratory state")
 
                     case "4":
                         print("  -----------  ")
                         print("Exiting Brewing Room")
+                        logs.append("Exited Brewing Room")
                         break
 
         case "4":
-            print(f"The Stock has a total of {sum(stock.values())} units")
+            logs.append("Watched global report")
+            print("GLOBAL REPORT:")
+            print(f" The Stock has a total of {sum(stock.values())} units")
+            print(f" The material with higher Stock is the {max(stock, key=stock.get)}")
+            print(f" You are {student_name}")
+            print(f" Last 2 operations done: {logs[-2:]}")
+            entire_log_selection = input("Do you want to see the whole logs\n 1) Yes\n 2) No\n")
+            match entire_log_selection:
+                case "1":
+                    print("Logs of the sesion:")
+                    enumerate_iterable(logs)
+                    logs.append("Watched whole logs")
+
+                case "2":
+                    print("Ok")
+
+                case _:
+                    print("Error, enter 1 or 2")
+
 
         case "5":
+            logs.append("Entered Recipe Managment")
             print("Entering Recipe Managment:")
             while True:
                 print("  -----------  ")
@@ -153,12 +184,14 @@ while True:
                     case "1":
                         print("Potions List:")
                         enumerate_iterable(potions)
+                        logs.append("Watched Potions List")
 
                     case "2":
                         print("  -----------  ")
                         print("Sorting Potions...")
                         potions = sorted(potions, key= lambda x: x["power"], reverse=True)
                         enumerate_iterable(potions)
+                        logs.append("Sorted Potions")
 
                     case "3":
                         new_potion_name = input("What do you want to call the new potion:\n")
@@ -199,6 +232,7 @@ while True:
                         print("  -----------  ")
 
                         add_potion(new_potion_name, new_potion_power, *new_potion_extra_materials, **new_potion_details)
+                        logs.append("Created a new potion")
 
                     case "4":
                         print("Potions Names:")
@@ -207,10 +241,12 @@ while True:
                         minimum_power = int(input("What minimum power level do you want to see the potions with:\n"))
                         high_power_potions = filter(lambda x: True if x["power"]>minimum_power else False, potions)
                         enumerate_iterable(high_power_potions)
+                        logs.append("Watched potions with a minimum power")
 
                     case "5":
                         print("  -----------  ")
                         print("Exiting Recipe Managment")
+                        logs.append("Exited Recipe Managment")
                         break
 
         case "6":
