@@ -2,7 +2,10 @@
 def numbers():
     yield from range(1,11)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5bfb10cb90c5dc267e6aa4f452b7c85ef638335d
 number = numbers()
 print(next(number))
 print(next(number))
@@ -12,7 +15,10 @@ print(next(number))
 print(next(number))
 print(list(number))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5bfb10cb90c5dc267e6aa4f452b7c85ef638335d
 #yield from
 def numbers_to_100():
     for i in range (100, 111):
