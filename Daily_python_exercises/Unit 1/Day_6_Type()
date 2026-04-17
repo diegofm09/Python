@@ -1,0 +1,11 @@
+numero_int = 30
+numero_float = 3.3
+print (type(numero_int))
+print (type(numero_float))
+print (type(numero_int + numero_float))
+
+print ("\n---------------------\n")
+
+n1 = 20
+n2 = 12.5
+print (type(n1 + int(n2)))

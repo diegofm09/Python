@@ -1,0 +1,14 @@
+def enter_numer_outer():
+    numbers = []
+    def enter_number_inner(number):
+        numbers.append(number)
+        print(numbers)
+    return enter_number_inner
+
+new_number = enter_numer_outer()
+new_number(3)
+new_number(4)
+new_number(12)
+new_number(9)
+
+    

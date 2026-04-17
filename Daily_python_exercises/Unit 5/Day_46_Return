@@ -1,0 +1,35 @@
+def add(a,b):
+    z = a + b
+    return z
+
+def substract(a,b):
+    z = a-b
+    return z
+
+def multiply(a,b):
+    z = a*b
+    returnz
+
+def divide(a,b):
+    z = a/b
+    return z
+
+print(add(3,4))
+resultado = add(3,4)
+print (resultado)
+print(substract(9,5))
+
+def create_name(first, last):
+    first = first.capitalize()
+    last = last.capitalize()
+    name = first + " " + last
+    return name
+print(create_name(input("Whats your first name\n"), input("Whats your last name\n")))
+
+def odd_or_even(a):
+    a = a
+    if a%2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+print(odd_or_even(int(input("Write a number\n"))))

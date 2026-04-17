@@ -1,0 +1,23 @@
+#using a function as an argument for other
+def louder(text):
+    return text.upper()
+
+def quieter(text):
+    return text.lower()
+
+def hello(function):
+    text = function("Hello")
+    return text
+
+print(hello(louder))
+print(hello(quieter))
+
+
+#returning a function
+def divisor(x):
+    def dividend(y):
+        return y/x
+    return dividend
+
+divide = divisor(4)
+print(divide(8))

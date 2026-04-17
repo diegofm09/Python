@@ -1,0 +1,30 @@
+def operation():
+    pass
+print (operation())
+for i in range(8):
+    pass
+if 8==8:
+    pass
+match i:
+    case 1:
+        pass
+
+x = 40
+def global_function():
+    global x
+    global y
+    y = 70
+    x = 50
+global_function()
+print(x)
+print(y)
+
+def outer():
+    z = 17
+    def inner():
+        nonlocal z
+        z = 20
+    inner()
+    print(z)
+outer()
+

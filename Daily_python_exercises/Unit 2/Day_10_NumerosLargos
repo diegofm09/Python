@@ -1,0 +1,5 @@
+numero_grande = 81792198239216
+print(numero_grande)
+
+numero_grande = 81_792_198_239_216
+print (numero_grande)

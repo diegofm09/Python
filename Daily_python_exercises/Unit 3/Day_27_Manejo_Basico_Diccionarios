@@ -1,0 +1,16 @@
+coche = {
+    "marca": "Ferrari",
+    "modelo": "812 Superfast",
+    "precio": 400000,
+    "caballos": 800,
+    "motor": "V12",
+    "disponibles": 5,
+}
+print (f'El {coche["marca"]} {coche["modelo"]}, tiene un motor {coche["motor"]} de {coche["caballos"]} CV y vale {coche["precio"]} euros, en el concesionario hay {coche["disponibles"]} a la venta\n')
+
+coche["disponibles"] = int(input("Introduzca cuantas unidades deseas añadir al stock\n")) + coche["disponibles"]
+coche ["velocidad"] = input("Introduce un numero del 300 al 350, para determinar su velocidad maxima\n")
+print ("A y una cosa, ya no necesitamos saber la marca\n")
+del coche["marca"]
+
+print (coche)

@@ -1,0 +1,26 @@
+numero = input("Dime un numero del 1 al 10 y te diré lo que és\n")
+match numero:
+    case "1":
+        print ("Un soldado haciendo la instruccion")
+    case "2":
+        print ("Un cisne flotando en el agua")
+    case "3":
+        print ("Una serpiente arrastrandose")
+    case "4":
+        print ("Una silla que te invita a descansar")
+    case "5":
+        print("Las orejas del tio Perico")
+    case "6":
+        print ("Una pera redonda y con rabillo")
+    case "7":
+        print ("Un sereno con gorro y bastón")
+    case "8":
+        print ("Unas gafas")
+    case "9":
+        print ("Un globo atado a un hilo")
+    case "10":
+        print ("Un soldade que lleva un gran melón")
+    case "0" | "100" | "67":
+        print ("Felicidades, hayaste un numero secreto")
+    case _:
+        print ("Eso o no es un numero, o es menor que el uno o mayor que el 10")

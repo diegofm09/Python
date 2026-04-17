@@ -1,0 +1,11 @@
+mamiferos = {"Leon", "Tigre", "Perro", "Gato", "Gato", "Camello", "Lobo"}
+print (mamiferos)
+
+mamiferos.add("Oso")
+print(mamiferos)
+
+mamiferos.remove("Perro")
+print(mamiferos)
+
+mamiferos.discard("Camello")
+print(mamiferos)

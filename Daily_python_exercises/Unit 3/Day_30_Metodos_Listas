@@ -1,0 +1,8 @@
+notas = [3, 5.6, 9, 10, 2.3, 6]
+print (f"Estas son las notas que ha sacado la clase:")
+print ("Ahora voy a ordenarlas de menor a mayor")
+notas.sort()
+print(notas)
+print("Ahora voy a invertirles el orden")
+notas.reverse()
+print(notas)

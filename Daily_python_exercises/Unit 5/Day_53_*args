@@ -1,0 +1,6 @@
+def tea_order(customer_name, tea_type, *extras):
+    print(f"{customer_name} ordered a {tea_type}")
+    for extra in extras:
+        print(f" - Extra {extra}")
+    
+tea_order("Diego", "Green tea", "milk")

@@ -1,0 +1,5 @@
+casa = [100, "Madrid", 560_000, "Piso"]
+print (f"Tiene {casa[0]} metros cuadrados")
+print (f"Vale {casa[2]} euros")
+print (f"Esta en {casa[1]}")
+print (f"El tipo de vivienda es un {casa[3]}")

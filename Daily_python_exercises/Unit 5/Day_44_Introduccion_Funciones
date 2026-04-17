@@ -1,0 +1,9 @@
+def saludar():
+    nombre = input("Como te llamas\n")
+    print(f"Hola {nombre.capitalize()}")
+saludar()
+
+def años():
+    años = int(input("Cuantos años tienes\n"))
+    print(f"Que disfrutes en tu {años+1} cumpleaños")
+años()

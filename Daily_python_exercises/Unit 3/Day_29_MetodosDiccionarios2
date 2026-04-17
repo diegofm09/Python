@@ -1,0 +1,11 @@
+claves = []
+claves.append(input("Dime una clave para el diccionario\n"))
+claves.append(input("Dime otra\n"))
+camiseta = dict.fromkeys(claves, input("Dime que valor quieres que le de a esas 2 claves\n"))
+print(camiseta)
+diccionario = {
+    "clave_ejemplo": "Hola",
+    "clave_ejemplo2": "Pepsicola",
+}
+camiseta.update(diccionario)
+print (camiseta)

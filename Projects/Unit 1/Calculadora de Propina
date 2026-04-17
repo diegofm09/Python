@@ -1,0 +1,3 @@
+cuenta = float(input("Cuanto dinero tienes que pagar?:\n"))
+propina = cuenta*0.15
+print (f"Si quieres dar un 15% de propina deberas dar {propina} euros")

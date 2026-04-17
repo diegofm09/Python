@@ -1,0 +1,5 @@
+n1 = float(input("Dime un numero\n"))
+n2 = float(input("Dime otro\n"))
+n3 = float(input("Dime otro\n"))
+print(f"Esta el {n2} entre el {n1} y el {n3}?\n {n1<n2 and n2<n3}")
+print(f"Es el {n3} menor que {n2} y que {n1}\n {n3<n2 and n3<n1}")

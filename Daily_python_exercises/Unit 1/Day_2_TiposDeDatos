@@ -1,0 +1,15 @@
+str = "Me llamo Diego"
+int = 12
+float = 3.14
+FLOAT = "Pi"
+bool = True
+
+
+print (float)
+print (FLOAT)
+
+
+string = "Diego"
+integrer = 16
+floating = 8.9
+boolean = False

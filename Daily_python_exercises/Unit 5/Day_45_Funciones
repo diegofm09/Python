@@ -1,0 +1,15 @@
+def cumpleaños(nombre, edad):
+    print(f"Cumpleaños feliz {nombre}")
+    print(f"Que lo pases muy bien {nombre} en tu {edad} cumpleaños")
+    print(f"Feliz cumpleaños {nombre}\n")
+
+cumpleaños("Diego", 18)
+cumpleaños("Pablo", 34)
+cumpleaños("Jhon", 57)
+
+def factura(nombre, cantidad, fecha):
+    print(f"Hola {nombre}")
+    print(f"Tu factura de {cantidad}$ se debe de pagar antes del {fecha}")
+    print (f"Si no, sera una factura de {round(cantidad*1.3, 2)}$")
+
+factura("Diego", 1200, "17/05")

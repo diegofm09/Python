@@ -1,0 +1,12 @@
+comida = ["Arroz", "Carne", "Huevos"]
+print (comida)
+
+comida.pop(int(input("Dime el numero de la posicion de la comida que menos te guste de ahi\n")) - 1)
+print (f"Vale, aqui tienes la nueva lista sin la comida que no te gustaba:\n {comida}")
+
+nueva = input("Dime ahora tu comida favorita\n").capitalize()
+comida.append(nueva)
+print (f"Mira, ya la he agregado: \n {comida}\n Pero a mi esa comida no me gusta asi que...\n")
+
+comida.remove(nueva)
+print(f"Ya esta, eliminé tu comida favorita, lo siento: \n {comida}")

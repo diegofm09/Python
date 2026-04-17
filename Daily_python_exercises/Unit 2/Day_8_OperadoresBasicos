@@ -1,0 +1,15 @@
+n1 = float(input("Dime un numero\n"))
+n2 = float(input("Dime otro\n"))
+
+suma = n1 + n2
+print (f"La suma es {suma} \n")
+
+resta = n1 - n2
+print (f"La resta es {resta} \n")
+
+multiplicacion = n1 * n2
+print (f"La multiplicacion es {multiplicacion} \n")
+
+division = n1/n2
+print (f"La division es {division} \n")
+

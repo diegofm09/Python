@@ -1,0 +1,9 @@
+n1 = float(input("Dime un numero por favor\n"))
+n2 = float(input("Dime otro por favor\n"))
+
+division_entera = n1//n2
+resto = n1%n2
+potencia = n1**n2
+
+print (f"Si se dividiesen el resultado seria {division_entera} y el resto seria {resto}\n")
+print (f"Si el primero se elevase al segundo daria {potencia}")

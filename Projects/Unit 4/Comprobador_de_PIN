@@ -1,0 +1,15 @@
+pin = input("Bienvenido al cajero automático, dime un numero de 4 cifras que quieres establecer como tu PIN\n")
+print("-----------------\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n-----------------\n\n")
+intentos = 3
+acierto = False
+while intentos>0:
+    intento = input(f"Introduzca el pin, intentos restantes: {intentos}\n")
+    if intento == pin:
+        print("Pin correcto")
+        acierto = True
+        break
+    else:
+        print("Incorrecto")
+        intentos -= 1
+print("Bienvenido" if acierto == True else "Cuenta bloqueada")
+

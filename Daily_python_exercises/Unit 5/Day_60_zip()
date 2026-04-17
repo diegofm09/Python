@@ -1,0 +1,12 @@
+names = ["Diego", "Pablo", "Pedro"]
+ages = [19, 67, 102]
+city = "Madrid", "Bilbao",
+people = dict(zip(names, ages))
+print(people)
+print(people["Pedro"])
+
+fruits = ["Pear", "Apple", "Watermelon"]
+prices = [12, 8, 20]
+shop = tuple(zip(fruits, prices))
+for fruit, price in shop:
+    print(f" - {fruit}: {price}$")

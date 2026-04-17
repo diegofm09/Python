@@ -1,0 +1,78 @@
+#map()
+texts = ["apple", "lion", "tiger", "school"]
+def uppercase(word):
+    if word.isupper():
+        word = word
+    else:
+        word = word.upper()
+    return word
+uppercase_texts = list(map(uppercase, texts))
+print (uppercase_texts)
+
+
+
+celsius = [0, 10, 20, 35, 40]
+
+def farenheit (temperature_celsius):
+    temperature_farenheit =  (temperature_celsius*(9/5) + 32)
+    return temperature_farenheit
+
+farenheit_temperatures = list(map(farenheit, celsius))
+print(farenheit_temperatures)
+
+
+
+
+
+#filter()
+users = ["ana", "bo", "catalina", "df", "esteban", "pau"]
+
+def long(word):
+    if len(word)>3:
+        return True
+    else:
+        return False
+    
+long_users = list(filter(long, users))
+print(long_users)
+
+
+
+
+
+#combination of filter and map
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def only_odds(num):
+    if num%2 == 0:
+        return False
+    else:
+        return True
+odd_nums = list(filter(only_odds, numbers))
+
+def square(num):
+    return num**2
+square_odd_nums = list(map(square,odd_nums))
+print(square_odd_nums)
+
+
+
+
+
+products = [
+    {"name": "Keyboard", "price": 120},
+    {"name": "Mouse", "price": 30},
+    {"name": "Monitor", "price": 300},
+    {"name": "USB Drive", "price": 10}
+]
+
+def less_than_100(product):
+    if product["price"]<100:
+        return True
+    else:
+        return False
+cheap_products = list(filter(less_than_100, products))
+
+def name(product):
+    return product["name"]
+cheap_products_names = list(map(name, cheap_products))
+print(cheap_products_names)

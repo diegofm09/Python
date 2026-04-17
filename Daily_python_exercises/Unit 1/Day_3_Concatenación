@@ -1,0 +1,13 @@
+introduccion = "La mejor serie es "
+serie = "Mr. Robot"
+
+frase_entera = introduccion + serie 
+print (frase_entera) 
+
+print ("La segunda mejor es " + "Breaking Bad")
+
+edad = "16"
+nombre = "Diego"
+nota_en_fisica = "10"
+pais = "España"
+print ("Hola, me llamo " + nombre + " tengo " + edad + " años" + " y soy de " + pais + " y he sacado un " + nota_en_fisica + " en fisica")

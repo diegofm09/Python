@@ -1,0 +1,10 @@
+marcas = ["Adidas", "Nike", "Puma", "NB"]
+for marca in marcas:
+    if marca == "Puma":
+        break
+    print(marca)
+
+i = 4
+while i < 24:
+    print(i)
+    i += 4

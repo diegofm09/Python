@@ -1,0 +1,12 @@
+contraseña = "421ubsK92n02npq41vt1514w"
+caracter = input(f"La contraseña es {contraseña}, pero como es muy larga, dime letras o numeros y te dire si los contiene\n")
+print(caracter in contraseña)
+
+for caracter in contraseña:
+    print(f"El {caracter} se repte en la contraseña {contraseña.count(caracter)} veces y aparece por primera vez en la posicion {contraseña.index(caracter)}")
+
+comidas = ["platano", "ternera", "arroz", "pan", "pasta", "manzana" ]
+print("ternera" in comidas)
+
+camiseta = {"talla": "XL"}
+print("XL"in camiseta.values())
