@@ -5,9 +5,8 @@ def enter_numer_outer():
         print(numbers)
     return enter_number_inner
 
-
-
 new_number = enter_numer_outer()
+
 new_number(3)
 new_number(4)
 new_number(12)
