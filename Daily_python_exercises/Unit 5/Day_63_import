@@ -1,0 +1,9 @@
+# print(help("modules"))
+# print(help("math"))
+
+import math as m
+print(m.pi)
+print(m.acos(0))
+
+import Day_63_module_example as example
+print(example.square(example.variable_example))
