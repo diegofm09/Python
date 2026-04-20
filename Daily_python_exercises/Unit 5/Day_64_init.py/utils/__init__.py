@@ -1,2 +1,3 @@
-print("You imported Utils")
+print("You imported Utils\n")
+
 import example
