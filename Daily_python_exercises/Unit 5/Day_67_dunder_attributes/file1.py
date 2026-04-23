@@ -1,4 +1,6 @@
 print(__name__)
-import file2
+import folder.file2
+from more.file3 import *
 
-print(__package__)
+print(__file__)
+print(add(2,3))
