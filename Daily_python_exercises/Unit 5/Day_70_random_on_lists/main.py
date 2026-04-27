@@ -1,5 +1,6 @@
 import random
 
+
 poker = ["diamonds", "hearts", "clubs", "spades"]
 print(random.choice(poker))
 
