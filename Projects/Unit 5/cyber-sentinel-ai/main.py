@@ -8,9 +8,22 @@ if __name__ == "__main__":
 
     if sanitized_username == "Lead_analyst" or (security_token >= 1000 and security_token <= 9999):
         print(f"Welcome {raw_username}")
+        sl.save_log("Entered the system")
     else:
         print("You can not enter")
+        sl.save_log("Access denyed")
         exit()
-
+        
     security_mode = "Encrypted" if dv.network_load > 50 else "Plain Text"
     print(f" Network load:{dv.network_load}\n Security mode: {security_mode}")
+    sl.save_log("Showed security mode")
+
+    raw_new_threats = input("What new threats do you want to register (Separated by commas):\n")
+    new_threats = list(set(raw_new_threats.split(",")))
+    dv.sec_threats_cve |= dv.sec_threats_cve.fromkeys(new_threats, 5)
+    sl.save_log("Added new threats")
+
+    print("Last logs:")
+    for position, i in enumerate(dv.logs[-2::], start = 1):
+        print(f"{position}: {i}")
+
