@@ -22,7 +22,7 @@ def energy_gen(max):
 @show_time
 def risky_virus(threats):
     risky_threats = []
-    for (name, level) in threats.items():
-        if level > 7:
-            risky_threats.append(name)
+    for threat in threats:
+        if threat["level"] > 7:
+            risky_threats.append(threat["name"])
     return risky_threats

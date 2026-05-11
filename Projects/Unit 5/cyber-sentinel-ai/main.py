@@ -20,29 +20,33 @@ if __name__ == "__main__":
         match comand:
             case "/help":
                 print("Commands:\n  /secmode\n  /newthreats\n  /lastlogs\n  /addpatch\n  /exit\n  /help\n  /scan")
+                sl.save_log("Used /help")
 
             case "/secmode":
                 security_mode = "Encrypted" if dv.network_load > 50 else "Plain Text"
                 print(f" Network load:{dv.network_load}\n Security mode: {security_mode}")
-                sl.save_log("Showed security mode")
+                sl.save_log("Used /secmode")
 
             case "/scan":
-                pass
+                
+                sl.save_log("Used /scan")
 
             case "/newthreats":
                 raw_new_threats = input("What new threats do you want to register (Separated by commas):\n")
                 new_threats = set(raw_new_threats.split(","))
                 dv.sec_threats_cve |= dv.sec_threats_cve.fromkeys(new_threats, 5)
-                sl.save_log("Added new threats")
+                sl.save_log("Used /newthreats")
 
             case "/lastlogs":
                 print("Last logs:")
                 for position, i in enumerate(dv.logs[-2::], start = 1):
                     print(f"{position}: {i}")
+                sl.save_log("Used /lastlogs")
 
             case "/addpatch":
                 dv.sec_threats_cve = {nombre: round(nota*1.15, 2) for (nombre,nota) in dv.sec_threats_cve.items()}
                 print(dv.sec_threats_cve)
+                sl.save_log("Used /addpatch")
 
             case "/exit":
                 max_threat = 0
@@ -51,10 +55,12 @@ if __name__ == "__main__":
                     max_threat_name = name if level > max_threat else max_threat_name
                     max_threat = level if level > max_threat else max_threat
                 print(f"Bye {raw_username}\nThe most dangerous threat was {max_threat_name}")
+                sl.save_log("Used /exit")
                 exit()
 
             case _:
                 print("Command not found, use /help to show all comands")
+                sl.save_log("Error, command not found")
 
 
 
