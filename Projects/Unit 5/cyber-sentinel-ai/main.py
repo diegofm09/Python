@@ -34,7 +34,13 @@ if __name__ == "__main__":
             case "/newthreats":
                 raw_new_threats = input("What new threats do you want to register (Separated by commas):\n")
                 new_threats = set(raw_new_threats.split(","))
-                dv.sec_threats_cve |= dv.sec_threats_cve.fromkeys(new_threats, 5)
+                for i in new_threats:
+                    level = 0
+                    while level <= 0 or level > 10:
+                        level = float(input(f"What level of danger does {i} have\n"))
+                        print("Error, level must be >0 and <10" if level <= 0 or level > 10 else "")
+                    new_dict = {"name": i, "level": level }
+                    dv.sec_threats_cve.append(new_dict)
                 sl.save_log("Used /newthreats")
 
             case "/lastlogs":
@@ -44,10 +50,10 @@ if __name__ == "__main__":
                 sl.save_log("Used /lastlogs")
 
             case "/addpatch":
-                dv.sec_threats_cve = {nombre: round(nota*1.15, 2) for (nombre,nota) in dv.sec_threats_cve.items()}
-                print(dv.sec_threats_cve)
+                dv.sec_threats_cve = list(map(lambda x: {"name": x["name"], "level": round((x["level"]*1.15)), 2}, dv.sec_threats_cve))
+                print("15% patch added")
                 sl.save_log("Used /addpatch")
-
+#solucionar este comando porque usa items()
             case "/exit":
                 max_threat = 0
                 max_threat_name = ""
