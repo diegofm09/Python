@@ -28,18 +28,21 @@ if __name__ == "__main__":
                 sl.save_log("Used /secmode")
 
             case "/scan":
-                dv.sec_threats_cve = sorted(dv.sec_threats_cve, key = lambda x: x["level"], reverse=True)
+                dangerous_threats = sl.risky_virus(dv.sec_threats_cve)
                 while True:
                     energy_source = input("Is your energy source a battery or a potato:\n")
                     if energy_source.capitalize() == "Battery":
-                        for i in dv.sec_threats_cve:
-                            print(sl.energy_gen(5))
-                            dv.sec_threats_cve.pop(i)
+                        energy_source = sl.energy_gen(7)
                         break
                     elif energy_source.capitalize() == "Potato":
+                        energy_source = sl.energy_gen(4)
                         break
                     else:
                         print("Thats not an option, Potato or Battery")
+                for (pulse, virus_name) in zip(energy_source, dangerous_threats):
+                    print(f"[{pulse}] Deleting: {virus_name}")
+                    dv.sec_threats_cve = [i for i in dv.sec_threats_cve if i["name"] != virus_name]
+                    print("Scan finished")
                 sl.save_log("Used /scan")
 
             case "/newthreats":
