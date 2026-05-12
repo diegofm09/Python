@@ -42,7 +42,7 @@ if __name__ == "__main__":
                 for (pulse, virus_name) in zip(energy_source, dangerous_threats):
                     print(f"[{pulse}] Deleting: {virus_name}")
                     dv.sec_threats_cve = [i for i in dv.sec_threats_cve if i["name"] != virus_name]
-                    print("Scan finished")
+                print("Scan finished")
                 sl.save_log("Used /scan")
 
             case "/newthreats":
@@ -64,7 +64,7 @@ if __name__ == "__main__":
                 sl.save_log("Used /lastlogs")
 
             case "/addpatch":
-                dv.sec_threats_cve = list(map(lambda x: {"name": x["name"], "level": (round((x["level"]*1.15)), 2)}, dv.sec_threats_cve))
+                dv.sec_threats_cve = list(map(lambda x: {"name": x["name"], "level": round((x["level"]*1.15), 2)}, dv.sec_threats_cve))
                 print("15% patch added")
                 sl.save_log("Used /addpatch")
 
