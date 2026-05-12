@@ -28,7 +28,18 @@ if __name__ == "__main__":
                 sl.save_log("Used /secmode")
 
             case "/scan":
-                
+                dv.sec_threats_cve = sorted(dv.sec_threats_cve, key = lambda x: x["level"], reverse=True)
+                while True:
+                    energy_source = input("Is your energy source a battery or a potato:\n")
+                    if energy_source.capitalize() == "Battery":
+                        for i in dv.sec_threats_cve:
+                            print(sl.energy_gen(5))
+                            dv.sec_threats_cve.pop(i)
+                        break
+                    elif energy_source.capitalize() == "Potato":
+                        break
+                    else:
+                        print("Thats not an option, Potato or Battery")
                 sl.save_log("Used /scan")
 
             case "/newthreats":
@@ -50,17 +61,12 @@ if __name__ == "__main__":
                 sl.save_log("Used /lastlogs")
 
             case "/addpatch":
-                dv.sec_threats_cve = list(map(lambda x: {"name": x["name"], "level": round((x["level"]*1.15)), 2}, dv.sec_threats_cve))
+                dv.sec_threats_cve = list(map(lambda x: {"name": x["name"], "level": (round((x["level"]*1.15)), 2)}, dv.sec_threats_cve))
                 print("15% patch added")
                 sl.save_log("Used /addpatch")
-#solucionar este comando porque usa items()
+
             case "/exit":
-                max_threat = 0
-                max_threat_name = ""
-                for (name,level) in dv.sec_threats_cve.items():
-                    max_threat_name = name if level > max_threat else max_threat_name
-                    max_threat = level if level > max_threat else max_threat
-                print(f"Bye {raw_username}\nThe most dangerous threat was {max_threat_name}")
+                print(f"Bye {raw_username}\nThe most dangerous threat was {max(dv.sec_threats_cve, key = lambda x: x['level'])['name']}")
                 sl.save_log("Used /exit")
                 exit()
 
