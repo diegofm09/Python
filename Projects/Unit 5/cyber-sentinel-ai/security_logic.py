@@ -5,7 +5,7 @@ def show_time(function):
     def wrapper(*args):
         raw_time = datetime.datetime.now()
         print(datetime.datetime.strftime(raw_time, "%H:%M:%S"))
-        function(*args)
+        return function(*args)
     return wrapper
 
 def save_log(action):
