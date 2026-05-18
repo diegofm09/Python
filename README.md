@@ -1,22 +1,22 @@
 # Python Journey 2026 🐍
 
-¡Hola! Estoy muy interesado en la ingeniería de software asi que he empezado a aprender documentando mi progreso diario. Mi objetivo es construir una base sólida para crear mis propios proyectos, emprender en el mundo tecnológico y especializarme en ciberseguridad avanzada, con enfoque en la ciberseguridad cuántica.
+Hi! I'm really interested in **Computer Science** so I've started to learn about it documenting my daily progress. My objective is to build solid foundations to create my own projects, venture into entrepreneurship in the tech world and specialize in **AI and Cloud Cybersecurity**.
 
-## 🛠️ Sobre mi aprendizaje en este repositorio
-* **Lenguaje:** Python 3.x
+## 🛠️ About my learning in this repository
+* **Language:** Python 3.x
 * **IDE:** Visual Studio Code
-* **Intereses:** Ingeniería de Software, Emprendimiento, blockchain y sobre todo la **ciberseguridad avanzada y cuantica**.
-* **Mentalidad:** Con muchísimas ganas de aprender todo lo que venga después y dominar nuevas tecnologías y lenguajes.
+* **Interests:** Computer Science, Entrepreneurship, **AI**, **Cloud**, **Cybersecurity** and the new tech the future will bring
+* **Mentality:** Eager to learn everything the future brings and master new technologies and languages.
 
-## 📁 Estructura del Repositorio
-* `Ejercicios_Diarios_Python/`: Donde aprendo cada día un poco mas.
-* `Proyectos_Por_Unidades/`: Donde al final de cada unidad hago un pequeño proyecto.
+## 📁 Repository Structure
+* `Daily_python_exercises/`: Where I upload what I've learned every day.
+* `Projects/`: Where at the end of each unit I upload a project where I practice everything I've learned until that moment.
 
-## 📈 Mi Progreso
-* **Unidad Actual:** Unidad 4 - Bucles.
-* **Estado:** Aprendiendo y mejorando cada día.
+## 📈 My Progress
+* **Current Unit:** Unit 6 - Error handling.
+* **Status:** Learning and improving every day.
 
 ---
 
-**Desarrollado por:** Diego Fernández Mendoza  
+**Made by:** Diego Fernández Mendoza  
 📧 [diegofermend@gmail.com](mailto:diegofermend@gmail.com)
