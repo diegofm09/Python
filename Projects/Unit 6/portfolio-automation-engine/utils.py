@@ -14,7 +14,6 @@ def show_time(funct):
     counter += 1
     return wrapper
 
-@show_time
 def date_validator(user_date):
     try:
         assert "-" in user_date, "Error, you have to write the date with hyphen"
