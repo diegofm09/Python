@@ -19,8 +19,6 @@ def prices_generator(names, days):
     except Exception:
         print("Unknown error")
 
-#probar que las funciones estas vayan bien
-
 def filter_prices(prices_list, cheap_price):
     cheap_stocks = list(filter(lambda x: x["price"] < cheap_price, prices_list))
     return cheap_stocks
@@ -32,7 +30,7 @@ def sort_prices(prices_list):
 def apply_taxes(prices_list):
     try:
         assert prices_list,("The list is empty")
-        final_prices = list(map(lambda x: x["price"]*0.99, prices_list))
+        final_prices = list(map(lambda x: {**x, "price": round(x["price"] * 0.99, 3)}, prices_list))
         return final_prices
     except AssertionError as e:
         print(e)
