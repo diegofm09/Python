@@ -42,7 +42,7 @@ while True:
                         for i in taxed_prices:
                             profitable = "PROFITABLE" if i["price"]>initial_capital else "LOSS"
                             print(f"  - {i['name']}, final price: {i['price']}, {profitable}")
-
+                        break
                     except ValueError:
                         print("Error, you must enter a number for prices/money and the number of days")
                     except Exception:
