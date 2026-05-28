@@ -9,7 +9,7 @@ def prices_generator(names, days):
             stocks.append(new_stock)
         yield stocks
 
-        for i in range (1,days):
+        for i in range (1,days +1):
             for stock in stocks:
                 stock["price"] *= random.uniform(0.94, 1.06)
                 stock["price"] = round(stock["price"], 3)
@@ -20,7 +20,7 @@ def prices_generator(names, days):
         print("Unknown error")
 
 def filter_prices(prices_list, cheap_price):
-    cheap_stocks = list(filter(lambda x: x["price"] < cheap_price, prices_list))
+    cheap_stocks = list(filter(lambda x: x["price"] > cheap_price, prices_list))
     return cheap_stocks
 
 def sort_prices(prices_list):
