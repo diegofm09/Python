@@ -32,7 +32,7 @@ while True:
 
                         cheap_price = int(input("What's the minimum stock price you want to filter by?\n"))
                         filtered_prices = engine.filter_prices(final_prices, cheap_price)
-                        print(f"-- Sorted and filtered final Stocks:\n  -- All stocks are below {cheap_price}$ --")
+                        print(f"-- Sorted and filtered final Stocks:\n  -- All stocks are above {cheap_price}$ --")
                         sorted_prices = engine.sort_prices(filtered_prices)
                         for i in sorted_prices:
                             print(f"  - {i['name']}: {i['price']}")
@@ -40,7 +40,7 @@ while True:
                         print(f"-- Sorted and filtered final Stocks after taxes:\n  -- The taxes are of 1% of the price --")
                         taxed_prices = engine.apply_taxes(sorted_prices)
                         for i in taxed_prices:
-                            profitable = "PROFITABLE" if i["price"]>initial_capital else "LOSS"
+                            profitable = "PROFITABLE" if i["price"]>100 else "LOSS"
                             print(f"  - {i['name']}, final price: {i['price']}, {profitable}")
 
                         medium_performance = 0
@@ -49,7 +49,7 @@ while True:
                             medium_performance+= x["price"]
                             counter += 1
                         medium_performance /= counter
-                        final_money = initial_capital*medium_performance
+                        final_money = initial_capital*(medium_performance/100)
                         print(f"Your final money is {round(final_money, 4)}$")
                         break
                     except ValueError:
