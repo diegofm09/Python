@@ -42,6 +42,15 @@ while True:
                         for i in taxed_prices:
                             profitable = "PROFITABLE" if i["price"]>initial_capital else "LOSS"
                             print(f"  - {i['name']}, final price: {i['price']}, {profitable}")
+
+                        medium_performance = 0
+                        counter = 0
+                        for x in taxed_prices: 
+                            medium_performance+= x["price"]
+                            counter += 1
+                        medium_performance /= counter
+                        final_money = initial_capital*medium_performance
+                        print(f"Your final money is {round(final_money, 4)}$")
                         break
                     except ValueError:
                         print("Error, you must enter a number for prices/money and the number of days")
