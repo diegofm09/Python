@@ -1,0 +1,6 @@
+tiger
+lion
+panda
+fox
+bear
+spider
