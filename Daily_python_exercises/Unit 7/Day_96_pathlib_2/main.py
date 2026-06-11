@@ -8,7 +8,7 @@ print(file1.parent.parent)
 
 print(file1.parent.parent.resolve())
 
-p = Path("..").resolve()
+p = Path(".").resolve()
 print(p)
 
 folder = Path(__file__).resolve().parent
