@@ -1,0 +1,30 @@
+{
+   "products": [
+      {
+         "name": "machiato",
+         "price": 10.99,
+         "in_stock": true,
+         "offer": 8.99,
+         "sizes": [
+            "XL",
+            "L",
+            "S",
+            "XXL",
+            "XXL"
+         ]
+      },
+      {
+         "name": "capuccino",
+         "price": 8.99,
+         "in_stock": false,
+         "offer": null,
+         "sizes": [
+            "L",
+            "M",
+            "S",
+            "XXL",
+            "XXL"
+         ]
+      }
+   ]
+}
