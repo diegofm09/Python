@@ -14,6 +14,7 @@ for i in catalog["products"]:
     print(catalog["products"][n])
 
 catalog["products"][0].get("sizes").append("XXL")
+
 catalog["products"][1].get("sizes").append("XXL")
 
 with open(catalog_path, "w") as file:
