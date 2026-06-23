@@ -1,0 +1,1 @@
+Hi, I have been writen with pathlib method write_text
