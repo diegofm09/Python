@@ -18,7 +18,6 @@ with open("Daily_python_exercises/Unit 7/Day_108_advanced_reading_files_practice
 line_3 = lines[2].upper()
 
 print(line_3)
-
 with open("Daily_python_exercises/Unit 7/Day_108_advanced_reading_files_practice/file.txt", "r") as file:
     song = file.read()
 
