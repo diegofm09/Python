@@ -1,0 +1,5 @@
+Random number between 1-100: 77
+Random number between 1-100: 72
+Random number between 1-100: 92
+Random number between 1-100: 99
+Random number between 1-100: 5
