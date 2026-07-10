@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from .auth import performance
 
 main_path = Path(__file__).resolve().parent.parent
 
@@ -31,7 +32,7 @@ try:
 except Exception:
     pass
 
-
+@performance
 def load_transactions():
     global transactions_list
     try:
@@ -42,7 +43,7 @@ def load_transactions():
     finally:
         print("File Closed Safely")
 
-
+@performance
 def save_transactions():
     global transactions_list
     try:
@@ -53,7 +54,7 @@ def save_transactions():
     finally:
         print("File Closed Safely")
 
-
+@performance
 def change_expense_limit(new_limit):
     with open(config_path, "r+") as file:
         new_limit_dict = json.load(file)
@@ -66,15 +67,14 @@ def change_expense_limit(new_limit):
         json.dump(new_limit_dict, file, indent=2)
         file.flush()
 
-
+@performance
 def create_clean_reports(reports_list, file_path):
     with open(file_path, "w") as file3:
         for line in reports_list:
             file3.write(repr(line)+ "\n")
 
-
+@performance
 def load_app_log(file_path):
     with open(file_path, "r") as file4:
         while (line:=file4.readline()) != "":
             print(line)
-
