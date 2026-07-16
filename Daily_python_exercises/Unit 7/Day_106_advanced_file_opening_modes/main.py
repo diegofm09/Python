@@ -7,7 +7,6 @@ try:
 except:
         print("This file already exists")
 
-
 #mode b, rb and wb
 main_path = Path(__file__).resolve().parent
 image = main_path/"image.jpg"
@@ -21,7 +20,6 @@ if not image_copy.exists():
                 break
             file2.write(block)
 
-
 secret_info = "Password = 90923"
 encoded_info = secret_info.encode("utf-8")
 
@@ -30,3 +28,5 @@ with open(main_path/"secret_info.bin", "wb") as file:
 
 with open(main_path/"secret_info.bin", "rb") as file:
     print(file.read().decode())
+
+    
