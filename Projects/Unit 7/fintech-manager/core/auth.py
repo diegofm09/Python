@@ -19,6 +19,25 @@ def performance(function):
         return result
     return wrapper
 
-def limit_verif(movement):
+def limit_verif():
     with open(config_path, "r") as file:
-        pass
+        config_dict = json.load(file)
+        limit = config_dict["expense_limit"]
+    def evaluate(movement):
+        if movement < 0:
+            return abs(movement)<limit
+        else:
+            return True
+    return evaluate
+
+def dinamic_alerts(*args, **kwargs):
+        if kwargs and "urgent" in kwargs and kwargs["urgent"] == True:
+            print("*****************")
+        for arg in args:
+            print(arg)
+        if kwargs and "urgent" in kwargs and kwargs["urgent"] == True:
+            print("*****************")
+
+
+
+
