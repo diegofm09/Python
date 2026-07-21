@@ -1,6 +1,6 @@
 # Python Journey 2026 🐍
 
-Hi! I'm really interested in **Computer Science** so I've started to learn about it documenting my daily progress. My objective is to build solid foundations to create my own projects, venture into entrepreneurship in the tech world and specialize in high-impact fields like AI, Cloud Cybersecurity or Quant development/Fintech
+Hi! I'm really interested in **Computer Science** so I've started to learn about it documenting my daily progress. My objective is to build solid foundations to create my own projects, venture into entrepreneurship in the tech world and specialize in high-impact fields like AI, Cloud Architect, Quant , Cybersecurity...
 
 ## 🛠️ About my learning in this repository
 * **Language:** Python 3.x
