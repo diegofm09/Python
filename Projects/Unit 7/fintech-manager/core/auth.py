@@ -31,11 +31,11 @@ def limit_verif():
     return evaluate
 
 def dinamic_alerts(*args, **kwargs):
-        if kwargs and "urgent" in kwargs and kwargs["urgent"] == True:
+        if kwargs and "urgent" in kwargs and kwargs.get("urgent") == True:
             print("*****************")
         for arg in args:
             print(arg)
-        if kwargs and "urgent" in kwargs and kwargs["urgent"] == True:
+        if kwargs and "urgent" in kwargs and kwargs.get("urgent") == True:
             print("*****************")
 
 
