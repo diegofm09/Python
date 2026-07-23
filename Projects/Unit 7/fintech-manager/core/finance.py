@@ -65,4 +65,5 @@ def analyze_transactions(trans_list):
     return analysis
 
 def filter_transactions(trans_list, minimum_value):
-    pass
+    filtered_trans_list = list(filter(trans_list, lambda x: x.get("amount")>minimum_value))
+    string_trans_list = list(map(filtered_trans_list, lambda x: f""))
