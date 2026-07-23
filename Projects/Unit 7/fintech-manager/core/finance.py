@@ -45,6 +45,12 @@ def add_international_movements(function_data_extractor_variable):
         yield i
 
 def analyze_transactions(trans_list):
-    analysis = {"net balance": None, "highest income": None, "highest spend": None}
-    for i in trans_list:
-        pass
+    analysis = {"net_balance": 0, "highest_income": 0, "highest_spend": 0}
+    trans_list_amounts = [i.get("amount") for i in trans_list]
+    analysis["net_balance"] = round(sum(trans_list_amounts), 3)
+    analysis["highest_spend"] = min(trans_list_amounts)
+    analysis["highest_income"] = max(trans_list_amounts)
+    return analysis
+
+def filter_transactions(trans_list, minimum_value):
+    pass
