@@ -34,18 +34,17 @@ except Exception:
 
 @performance
 def load_transactions():
-    global transactions_list
     try:
         with open(transactions_path, "r") as file1:
-            transactions_list = json.load(file1)
+            return json.load(file1)
     except Exception:
         print("Error ocurred while loading transactions")
+        return []
     finally:
         print("File Closed Safely")
 
 @performance
-def save_transactions():
-    global transactions_list
+def save_transactions(transactions_list):
     try:
         with open(transactions_path, "w") as file2:
             json.dump(transactions_list, file2, indent=2)

@@ -8,34 +8,46 @@ def data_extractor(movement_list, category = None):
 def add_international_movements(function_data_extractor_variable):
     international_movements = [
     {
+        "id": 901,
         "amount": -45.00,
         "category": "Subscriptions",
-        "concept": "US Cloud Server (AWS)"
+        "concept": "US Cloud Server (AWS)",
+        "date": "2026-07-21 10:39:02",
     },
     {
+        "id": 902,
         "amount": 120.50,
         "category": "Investments",
-        "concept": "S&P 500 Dividend"
+        "concept": "S&P 500 Dividend",
+        "date": "2026-07-19 18:20:54",
     },
     {
+        "id": 903,
         "amount": -89.99,
         "category": "Shopping",
-        "concept": "Amazon US Tech Purchase"
+        "concept": "Amazon US Tech Purchase",
+        "date": "2026-07-20 03:02:12",
     },
     {
+        "id": 904,
         "amount": -15.00,
         "category": "Entertainment",
-        "concept": "Spotify Premium US"
+        "concept": "Spotify Premium US",
+        "date": "2026-07-21 19:52:53",
     },
     {
+        "id": 905,
         "amount": -210.00,
         "category": "Travel",
-        "concept": "Hotel Booking Tokyo"
+        "concept": "Hotel Booking Tokyo",
+        "date": "2026-07-21 13:29:52",
     },
     {
+        "id": 906,
         "amount": 350.00,
         "category": "Freelance",
-        "concept": "International Client Wire Transfer"
+        "concept": "International Client Wire Transfer",
+        "date": "2026-07-23 23:07:02"
     }
     ]
     for i in function_data_extractor_variable:

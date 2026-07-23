@@ -22,7 +22,7 @@ def performance(function):
 def limit_verif():
     with open(config_path, "r") as file:
         config_dict = json.load(file)
-        limit = config_dict["expense_limit"]
+        limit = config_dict.get("expense_limit")
     def evaluate(movement):
         if movement < 0:
             return abs(movement)<limit
