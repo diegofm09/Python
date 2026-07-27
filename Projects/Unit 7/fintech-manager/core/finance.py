@@ -1,6 +1,7 @@
 import random
 from pathlib import Path
 import json
+import datetime
 
 main_path = Path(__file__).resolve().parent.parent
 config_path = main_path/"config.json"
@@ -87,15 +88,27 @@ def get_categorys(trans_list):
 def easy_read(trans_list):
     return  {i.get("id"): (i.get("category"), i.get("amount")) for i in trans_list}
 
-#mete aqui lo de ordenarlas por fecha
 def sort_transactions(trans_list, sort_key):
     if sort_key == "money":
-        sorted(trans_list, key = lambda x: x.get("amount"))
+        trans_list = sorted(trans_list, key = lambda x: x.get("amount"))
         return trans_list
     elif sort_key == "date":
-        sorted(trans_list, )
+        trans_list = sorted(trans_list, key = lambda x: datetime.datetime.strptime(x.get("date"), "%Y-%m-%d %H:%M:%S"))
+        return trans_list
     else:
         return trans_list
     
-def categorys_analysis():
-    pass
+def analyze_expenses_deviation(trans_list, historical_categories):
+    actual_categories = {i.get("category") for i in trans_list if i.get("amount") < 0}
+    historical_categories = set(historical_categories)
+
+    repited_expenses = actual_categories&historical_categories
+    print("Repited Expenses:")
+    for position,x in enumerate(repited_expenses, start = 1):
+        print(f" -{position}: {x}")
+
+    new_expenses = actual_categories-historical_categories
+    print("New Expenses:")
+    for position,x in enumerate(new_expenses, start = 1):
+            print(f" -{position}: {x}")
+
