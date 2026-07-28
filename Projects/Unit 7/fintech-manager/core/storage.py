@@ -10,28 +10,47 @@ app_log_path = data_path/"app_log.txt"
 config_path = main_path/"config.json"
 clean_report_path = data_path/"clean_report.txt"
 
-
-if not data_path.is_dir():
-    data_path.mkdir()
-
-
-if not transactions_path.exists():
-    with open(transactions_path, "w") as file:
-        transactions_list = []
-        json.dump(transactions_list, file, indent = 2)
+def initialize_files():
+    if not data_path.is_dir():
+        data_path.mkdir()
 
 
-if not app_log_path.exists():
-    app_log_path.touch()
+    if not transactions_path.exists():
+        with open(transactions_path, "w") as file:
+            transactions_list = []
+            json.dump(transactions_list, file, indent = 2)
 
 
-try:
-    with open(config_path, "x") as file:
-        initial_data = {"user_name": "name", "currency": "EUR", "expense_limit": 500.00}
-        json.dump(initial_data, file, indent=2)
-except Exception:
-    pass
+    if not app_log_path.exists():
+        app_log_path.touch()
 
+
+    try:
+        with open(config_path, "x") as file:
+            initial_data = {"user_name": "name", "currency": "EUR", "expense_limit": 500.00}
+            json.dump(initial_data, file, indent=2)
+    except Exception:
+        pass
+
+def change_name():
+    with open(config_path, "r") as file:
+        config_dict = json.load(file)
+    if config_dict.get("user_name") == "name":
+        config_dict["user_name"] = input("Welcome, introduce your user name: ")
+    else:
+        while True:
+            selection = input(f"Your current user name is {config_dict.get("user_name")}:\n -Enter 1 if you would lime to change it\n -Enter 2 if you want to leave it like that:\n")
+            match selection:
+                case "2":
+                    print(f"Okey, Welcome {config_dict.get("user_name")}")
+                    break
+                case "1":
+                    config_dict["user_name"] = input("Okey, enter your new name: ")
+                    break
+                case _:
+                    print("Error, please enter either 1 or 2")
+        with open(config_path, "w") as file:
+            json.dump(config_dict, file, indent = 2)
 @performance
 def load_transactions():
     try:

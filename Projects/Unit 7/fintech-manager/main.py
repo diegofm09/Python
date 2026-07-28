@@ -1,3 +1,8 @@
-import datetime
+from core import auth, finance, storage, utils
 
-print(datetime.datetime.now())
+if __name__ == "__main__":
+    storage.initialize_files()
+    storage.change_name()
+
+
+

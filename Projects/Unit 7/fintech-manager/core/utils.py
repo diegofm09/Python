@@ -13,7 +13,7 @@ def calendar_planification():
     plus_one_month = (actual_time + one_month).strftime("%d/%m/%Y %H:%M:%S")
     plus_two_month = (actual_time + one_month*2).strftime("%d/%m/%Y %H:%M:%S")
     plus_three_month = (actual_time + one_month*3).strftime("%d/%m/%Y %H:%M:%S")
-    print(f"Today is {actual_time.strftime("%d/%m/%Y %H:%M:%S")}:\n -In 30 days it will be {plus_one_month}\n -In 60 days it will be {plus_two_month}\n -In 90 days it will be {plus_three_month}")
+    print(f'Today is {actual_time.strftime("%d/%m/%Y %H:%M:%S")}:\n -In 30 days it will be {plus_one_month}\n -In 60 days it will be {plus_two_month}\n -In 90 days it will be {plus_three_month}')
 
 def market_sim(seed_numb=None):
     if seed_numb:
