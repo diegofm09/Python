@@ -3,8 +3,8 @@ from pathlib import Path
 import json
 
 main_path = Path(__file__).resolve().parent
-config_path = main_path/"config.json"
 
+config_path = main_path/"config.json"
 
 if __name__ == "__main__":
     storage.initialize_files()
