@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 0,
+    "amount": 0,
+    "category": "Configuration",
+    "concept": "Initialization Transaction",
+    "date": "2026-07-29 13:21:49"
+  }
+]
