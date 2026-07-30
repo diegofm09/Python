@@ -1,6 +1,6 @@
 from core import auth, finance, storage, utils
 from pathlib import Path
-import json
+import json, datetime
 
 main_path = Path(__file__).resolve().parent
 
@@ -22,17 +22,37 @@ if __name__ == "__main__":
                 print(f'Profile:\n Username: {user_name}\n Currency: {config["currency"]}\n Expense Limit: {config["expense_limit"]}\n Net Balance: {net_balance}')
                 print("✅ ALL GOOD ✅" if net_balance >= 0 else "⚠️ DANGER, NET BALANCE BELOW 0 ⚠️")
             case "2":
-                pass
+                print("New Transaction:")
+                amount = float(input("Enter the transaction amount, (If it is an expense, the number must be negative): "))
+                evaluate_limit = auth.limit_verif()
+                if not evaluate_limit(amount):
+                    auth.dinamic_alerts("Error, Expense higher than limit", urgent=True)
+                category = input("Enter the category: ")
+                concept = input("Enter the concept: ")
+                date = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+                id = storage.load_transactions()[-1]["id"] + 1
+                print(id)
+                print("asw")
+                trans_list = storage.load_transactions()
+                trans_list.append({"id": id, "amount": amount, "category": category, "concept": concept, "date": date})  
+                print(trans_list)
+                storage.save_transactions(trans_list)     
+
             case "3":
                 pass
+
             case "4":
                 pass
+
             case "5":
                 pass
+
             case "6":
                 pass
+
             case "7":
                 print(f"Goodbye, {user_name} 👋")
                 exit()
+                
             case _:
                 print("Error, that option is not avaiable, please enter a number beetwen 1 and 7")

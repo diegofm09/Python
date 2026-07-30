@@ -13,7 +13,7 @@ def performance(function):
         initial_time = time.time()
         result = function(*args, **kwargs)
         execution_time = time.time() - initial_time
-        date_time = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        date_time = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
         with open(app_log_path, "a") as file:
             file.write(f"[{date_time}] - FUNCTION: {function.__name__} - EXECUTION TIME: {round(execution_time*1000, 3)}ms\n")
         return result
