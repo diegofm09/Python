@@ -11,7 +11,7 @@ if __name__ == "__main__":
     user_name = storage.change_name()
     while True:
         print("  -------------------------")
-        selection = input("Menu Selection:\n 1) Profile and balance\n 2) Register Transaction\n 3) Advanced History\n 4) Investings and Simulator\n 5) Monthly Expenses Analysis\n 6) System Auditory\n 7) Close System\n")
+        selection = input("Menu Selection:\n 1) Profile and balance\n 2) Register Transaction\n 3) Advanced History\n 4) Calculators and Simulators\n 5) Monthly Expenses Analysis\n 6) System Auditory\n 7) Close System\n")
         print("  -------------------------")
         match selection:
             case "1":
@@ -42,7 +42,27 @@ if __name__ == "__main__":
                 pass
 
             case "4":
-                pass
+                while True:
+                   sub_selection = input("Simulators SubMenu:\n 1) Compound Interest Calculator\n 2) Market Simulator\n 3) Calendar Planificator\n 4) Close SubMenu\n")
+                   print("  -------------------------")
+                   match sub_selection:
+                        case "1":
+                            print("Compund Interest Calculator:")
+                            try:
+                               initial_money = input("What is your initial money")
+                        case "2":
+                            print("Market Simulator:")
+                            new = next(utils.market_sim())
+                            print(f'Recomended Stock: {new["recomended_stock"]}, Variation: {new["variation"]}')
+                            print("  -------------------------")
+                        case "3":
+                            print("Calendar Planificator:")
+                            utils.calendar_planification()
+                            print("  -------------------------")
+                        case "4":
+                            break
+                        case _:
+                            print("Error, that option is not avaiable, please enter a number beetwen 1 and 4")
 
             case "5":
                 pass
@@ -53,6 +73,6 @@ if __name__ == "__main__":
             case "7":
                 print(f"Goodbye, {user_name} 👋")
                 exit()
-                
+
             case _:
                 print("Error, that option is not avaiable, please enter a number beetwen 1 and 7")
