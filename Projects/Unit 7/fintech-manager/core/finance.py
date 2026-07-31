@@ -18,42 +18,42 @@ def add_international_movements(function_data_extractor_variable):
         "amount": -45.00,
         "category": "Subscriptions",
         "concept": "US Cloud Server (AWS)",
-        "date": "2026-07-21 10:39:02",
+        "date": "21-07-2026 10:39:02",
     },
     {
         "id": 902,
         "amount": 120.50,
         "category": "Investments",
         "concept": "S&P 500 Dividend",
-        "date": "2026-07-19 18:20:54",
+        "date": "19-07-2026 18:20:54",
     },
     {
         "id": 903,
         "amount": -89.99,
         "category": "Shopping",
         "concept": "Amazon US Tech Purchase",
-        "date": "2026-07-20 03:02:12",
+        "date": "20-07-2026 03:02:12",
     },
     {
         "id": 904,
         "amount": -15.00,
         "category": "Entertainment",
         "concept": "Spotify Premium US",
-        "date": "2026-07-21 19:52:53",
+        "date": "21-07-2026 19:52:53",
     },
     {
         "id": 905,
         "amount": -210.00,
         "category": "Travel",
         "concept": "Hotel Booking Tokyo",
-        "date": "2026-07-21 13:29:52",
+        "date": "21-07-2026 13:29:52",
     },
     {
         "id": 906,
         "amount": 350.00,
         "category": "Freelance",
         "concept": "International Client Wire Transfer",
-        "date": "2026-07-23 23:07:02"
+        "date": "23-07-2026 23:07:02"
     }
     ]
     for i in function_data_extractor_variable:
@@ -93,22 +93,27 @@ def sort_transactions(trans_list, sort_key):
         trans_list = sorted(trans_list, key = lambda x: x.get("amount"))
         return trans_list
     elif sort_key == "date":
-        trans_list = sorted(trans_list, key = lambda x: datetime.datetime.strptime(x.get("date"), "%Y-%m-%d %H:%M:%S"))
+        trans_list = sorted(trans_list, key = lambda x: datetime.datetime.strptime(x.get("date"), "%d-%m-%Y %H:%M:%S"))
         return trans_list
     else:
         return trans_list
     
 def analyze_expenses_deviation(trans_list, historical_categories):
-    actual_categories = {i.get("category") for i in trans_list if i.get("amount") < 0}
+    actual_month = datetime.datetime.now().strftime("%m-%Y")
+    actual_categories = {i.get("category") for i in trans_list if i.get("amount") < 0 and datetime.datetime.strptime(i.get("date"), "%d-%m-%Y %H:%M:%S").strftime("%m-%Y") == actual_month}
     historical_categories = set(historical_categories)
+
+    print("This month categories:")
+    for position,x in enumerate(actual_categories, start = 1):
+        print(f" {position}: {x}")    
 
     repited_expenses = actual_categories&historical_categories
     print("Repited Expenses:")
     for position,x in enumerate(repited_expenses, start = 1):
-        print(f" -{position}: {x}")
+        print(f" {position}: {x}")
 
     new_expenses = actual_categories-historical_categories
     print("New Expenses:")
     for position,x in enumerate(new_expenses, start = 1):
-            print(f" -{position}: {x}")
+            print(f" {position}: {x}")
 

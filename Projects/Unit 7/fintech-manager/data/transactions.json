@@ -4,6 +4,20 @@
     "amount": 0,
     "category": "Configuration",
     "concept": "Initialization Transaction",
-    "date": "2026-07-30 13:30:22"
+    "date": "30-07-2026 13:30:22"
+  },
+  {
+    "id": 1,
+    "amount": -234.0,
+    "category": "Food",
+    "concept": "Supermarket Shopping",
+    "date": "31-07-2026 12:46:39"
+  },
+  {
+    "id": 2,
+    "amount": -15.0,
+    "category": "Subscriptions",
+    "concept": "Spotify Subscription",
+    "date": "31-07-2026 12:50:41"
   }
 ]

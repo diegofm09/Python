@@ -23,7 +23,7 @@ def initialize_files():
                     "amount": 0,
                     "category": "Configuration",
                     "concept": "Initialization Transaction",
-                    "date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "date": datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
                 },]
             json.dump(transactions_list, file, indent = 2)
 
