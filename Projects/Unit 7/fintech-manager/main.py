@@ -96,6 +96,7 @@ if __name__ == "__main__":
                                         for position, i in enumerate(finance.sort_transactions(trans_list, "date"), start = 1):
                                             print(f'{position}) ID: {i.get("id")} {i.get("date")}\n  AMOUNT: {i.get("amount")}$\n  CATEGORY: {i.get("category")}\n  CONCEPT:{i.get("concept")}')
                                             break
+                                        
                                         #ARRREGLAR ESTO QUE NO VA
                                     case _:
                                         print("Error, Enter 1 for amount or 2 for date")
