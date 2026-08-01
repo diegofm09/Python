@@ -37,7 +37,7 @@ def add_international_movements(function_data_extractor_variable):
     {
         "id": 904,
         "amount": -15.00,
-        "category": "Entertainment",
+        "category": "Subscriptions",
         "concept": "Spotify Premium US",
         "date": "21-07-2026 19:52:53",
     },
@@ -51,7 +51,7 @@ def add_international_movements(function_data_extractor_variable):
     {
         "id": 906,
         "amount": 350.00,
-        "category": "Freelance",
+        "category": "Job",
         "concept": "International Client Wire Transfer",
         "date": "23-07-2026 23:07:02"
     }
@@ -86,7 +86,7 @@ def get_categorys(trans_list):
     return {i.get("category") for i in trans_list}
 
 def easy_read(trans_list):
-    return  {i.get("id"): (i.get("category"), i.get("amount")) for i in trans_list}
+    return dict({i.get("id"): (i.get("category"), i.get("amount")) for i in trans_list})
 
 def sort_transactions(trans_list, sort_key):
     if sort_key == "money":

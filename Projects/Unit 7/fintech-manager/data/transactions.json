@@ -19,5 +19,12 @@
     "category": "Subscriptions",
     "concept": "Spotify Subscription",
     "date": "31-07-2026 12:50:41"
+  },
+  {
+    "id": 3,
+    "amount": -234.0,
+    "category": "Shopping",
+    "concept": "Clothes ",
+    "date": "01-08-2026 13:41:41"
   }
 ]
