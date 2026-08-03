@@ -93,7 +93,7 @@ def sort_transactions(trans_list, sort_key):
         trans_list = sorted(trans_list, key = lambda x: x.get("amount"))
         return trans_list
     elif sort_key == "date":
-        trans_list = sorted(trans_list, key = lambda x: datetime.datetime.strptime(x.get("date"), "%d-%m-%Y %H:%M:%S"))
+        trans_list = sorted(trans_list, key = lambda x: datetime.datetime.strptime(x.get("date"), "%d-%m-%Y %H:%M:%S"), reverse=True)
         return trans_list
     else:
         return trans_list

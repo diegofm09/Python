@@ -26,5 +26,12 @@
     "category": "Shopping",
     "concept": "Clothes ",
     "date": "01-08-2026 13:41:41"
+  },
+  {
+    "id": 4,
+    "amount": 545.0,
+    "category": "Job",
+    "concept": "Bonus",
+    "date": "03-08-2026 12:43:58"
   }
 ]
