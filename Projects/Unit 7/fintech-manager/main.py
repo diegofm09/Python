@@ -68,62 +68,111 @@ if __name__ == "__main__":
                     print("  -------------------------")
                     match sub_selection2:
                         case "1":
-                            print("Transactions Check:")
-                            if counter == 0:
-                                specific_category = input("Do you want to check any specific category?(Y/N): ").capitalize()
-                                match specific_category:
-                                    case "Y":
-                                        specific_category = input("Enter the number of the category:\n 1) Food \n 2) Job \n 3) Travel \n 4) Subscriptions \n 5) Shopping \n 6) Utilities \n 7) Investments \n 8) Enter 8 if you want to introduce a new personalized category\n")
-                                        match  specific_category:
-                                            case "1":
-                                                specific_category = "Food"
-                                            case "2":
-                                                specific_category = "Job"
-                                            case "3":
-                                                specific_category = "Travel"
-                                            case "4":
-                                                specific_category = "Subscriptions"
-                                            case "5":
-                                                specific_category = "Shopping"
-                                            case "6":
-                                                specific_category = "Utilities"
-                                            case "7":
-                                                specific_category = "Investments"
-                                            case "8":
-                                                specific_category = input("Enter the personalized category: ")
-                                            case _:
-                                                print("Error, please enter a number between 1 and 8")
-                                    case "N":
-                                        specific_category = None
-                                    case  _:
-                                        print("Error, please enter Y or N")
+                            try:
+                                print("Transactions Check:")
+                                if counter == 0:
+                                    specific_category = input("Do you want to check any specific category?(Y/N): ").capitalize()
+                                    match specific_category:
+                                        case "Y":
+                                            specific_category = input("Enter the number of the category:\n 1) Food \n 2) Job \n 3) Travel \n 4) Subscriptions \n 5) Shopping \n 6) Utilities \n 7) Investments \n 8) Enter 8 if you want to introduce a new personalized category\n")
+                                            match  specific_category:
+                                                case "1":
+                                                    specific_category = "Food"
+                                                case "2":
+                                                    specific_category = "Job"
+                                                case "3":
+                                                    specific_category = "Travel"
+                                                case "4":
+                                                    specific_category = "Subscriptions"
+                                                case "5":
+                                                    specific_category = "Shopping"
+                                                case "6":
+                                                    specific_category = "Utilities"
+                                                case "7":
+                                                    specific_category = "Investments"
+                                                case "8":
+                                                    specific_category = input("Enter the personalized category: ")
+                                                case _:
+                                                    print("Error, please enter a number between 1 and 8")
+                                        case "N":
+                                            specific_category = None
+                                        case  _:
+                                            print("Error, please enter Y or N")
 
-                                data_variable = finance.data_extractor(trans_list, specific_category)
+                                    data_variable = finance.data_extractor(trans_list, specific_category)
 
-                                add_internationals = input("Do you want to add international movements?(Y/N): ").capitalize()
-                                match add_internationals:
-                                    case "Y":
-                                        counter += 1
-                                        generator = next(finance.add_international_movements(data_variable))
-                                        print(f'ID: {generator.get("id")} {generator.get("date")}\n  AMOUNT: {generator.get("amount")}$\n  CATEGORY: {generator.get("category")}\n  CONCEPT:{generator.get("concept")}')
-                                    case "N":
-                                        counter += 1
-                                        generator = next(data_variable)
-                                        print(f'ID: {generator.get("id")} {generator.get("date")}\n  AMOUNT: {generator.get("amount")}$\n  CATEGORY: {generator.get("category")}\n  CONCEPT:{generator.get("concept")}')
-                                 
-                                    case  _:
-                                        print("Error, please enter Y or N")
-                                print("  -------------------------")
-                            else:
-                                selection = input("Do you want to continue with the previous generator(1) or start a new one(2): ")
-                                match selection:
-                                    case "1":
-                                        print(f'ID: {generator.get("id")} {generator.get("date")}\n  AMOUNT: {generator.get("amount")}$\n  CATEGORY: {generator.get("category")}\n  CONCEPT:{generator.get("concept")}')
-                                    case "2":
-                                        pass
-                                    #TOCA ESTA PRYE---___-d-w-d-we-e-c-edimcoasihfowqufhdiwufhr9uewqhf9ieruhfrwiuoqinndgsyfn
-                                    case _:
-                                        print("Error, please enter 1 or 2")
+                                    add_internationals = input("Do you want to add international movements?(Y/N): ").capitalize()
+                                    match add_internationals:
+                                        case "Y":
+                                            counter += 1
+                                            generator = finance.add_international_movements(data_variable, specific_category)
+                                            actual = next(generator)
+                                            print(f'ID: {actual.get("id")} {actual.get("date")}\n  AMOUNT: {actual.get("amount")}$\n  CATEGORY: {actual.get("category")}\n  CONCEPT:{actual.get("concept")}')
+                                        case "N":
+                                            counter += 1
+                                            generator = data_variable
+                                            actual = next(generator)
+                                            print(f'ID: {actual.get("id")} {actual.get("date")}\n  AMOUNT: {actual.get("amount")}$\n  CATEGORY: {actual.get("category")}\n  CONCEPT:{actual.get("concept")}')
+                                    
+                                        case  _:
+                                            print("Error, please enter Y or N")
+                                    
+                                else:
+                                    selection = input("Do you want to continue with the previous generator(1) or start a new one(2): ")
+                                    match selection:
+                                        case "1":
+                                            actual = next(generator)
+                                            print(f'ID: {actual.get("id")} {actual.get("date")}\n  AMOUNT: {actual.get("amount")}$\n  CATEGORY: {actual.get("category")}\n  CONCEPT:{actual.get("concept")}')
+                                        case "2":
+                                            specific_category = input("Do you want to check any specific category?(Y/N): ").capitalize()
+                                            match specific_category:
+                                                case "Y":
+                                                    specific_category = input("Enter the number of the category:\n 1) Food \n 2) Job \n 3) Travel \n 4) Subscriptions \n 5) Shopping \n 6) Utilities \n 7) Investments \n 8) Enter 8 if you want to introduce a new personalized category\n")
+                                                    match  specific_category:
+                                                        case "1":
+                                                            specific_category = "Food"
+                                                        case "2":
+                                                            specific_category = "Job"
+                                                        case "3":
+                                                            specific_category = "Travel"
+                                                        case "4":
+                                                            specific_category = "Subscriptions"
+                                                        case "5":
+                                                            specific_category = "Shopping"
+                                                        case "6":
+                                                            specific_category = "Utilities"
+                                                        case "7":
+                                                            specific_category = "Investments"
+                                                        case "8":
+                                                            specific_category = input("Enter the personalized category: ")
+                                                        case _:
+                                                            print("Error, please enter a number between 1 and 8")
+                                                case "N":
+                                                    specific_category = None
+                                                case  _:
+                                                    print("Error, please enter Y or N")
+                                            
+                                            data_variable = finance.data_extractor(trans_list, specific_category)
+                                            
+                                            add_internationals = input("Do you want to add international movements?(Y/N): ").capitalize()
+                                            match add_internationals:
+                                                case "Y":
+                                                    counter += 1
+                                                    generator = finance.add_international_movements(data_variable, specific_category)
+                                                    actual = next(generator)
+                                                    print(f'ID: {actual.get("id")} {actual.get("date")}\n  AMOUNT: {actual.get("amount")}$\n  CATEGORY: {actual.get("category")}\n  CONCEPT:{actual.get("concept")}')
+                                                case "N":
+                                                    counter += 1
+                                                    generator = data_variable
+                                                    actual = next(generator)
+                                                    print(f'ID: {actual.get("id")} {actual.get("date")}\n  AMOUNT: {actual.get("amount")}$\n  CATEGORY: {actual.get("category")}\n  CONCEPT:{actual.get("concept")}')
+                                            
+                                                case  _:
+                                                    print("Error, please enter Y or N")
+                            except StopIteration:
+                                print("Error, the generator ended")
+
+                            print("  -------------------------")
                         case "2":
                             print("Transactions Analysis:")
                             analysis = finance.analyze_transactions(trans_list)

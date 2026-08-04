@@ -11,7 +11,7 @@ def data_extractor(movement_list, category = None):
             if not category or movement.get("category") == category:
                 yield movement 
 
-def add_international_movements(function_data_extractor_variable):
+def add_international_movements(function_data_extractor_variable, category = None):
     international_movements = [
     {
         "id": 901,
@@ -58,9 +58,9 @@ def add_international_movements(function_data_extractor_variable):
     ]
     for i in function_data_extractor_variable:
         yield i 
-    international_movements_random = random.sample(international_movements, random.randint(2,3))
-    for i in international_movements_random:
-        yield i
+    for movement in international_movements:
+        if not category or movement.get("category") == category:
+            yield movement 
 
 def analyze_transactions(trans_list):
     analysis = {"net_balance": 0, "highest_income": 0, "highest_expense": 0}
