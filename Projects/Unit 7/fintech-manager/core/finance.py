@@ -108,7 +108,7 @@ def analyze_expenses_deviation(trans_list, historical_categories):
         print(f" {position}: {x}")    
 
     repited_expenses = actual_categories&historical_categories
-    print("Repited Expenses:")
+    print("Repeated Expenses:")
     for position,x in enumerate(repited_expenses, start = 1):
         print(f" {position}: {x}")
 

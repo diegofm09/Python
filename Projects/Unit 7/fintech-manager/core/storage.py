@@ -50,7 +50,7 @@ def change_name():
         return config_dict["user_name"]    
     else:
         while True:
-            selection = input(f'Your current user name is {config_dict.get("user_name")}:\n -Enter 1 if you would lime to change it\n -Enter 2 if you want to leave it like that:\n')
+            selection = input(f'Your current user name is {config_dict.get("user_name")}:\n -Enter 1 if you would like to change it\n -Enter 2 if you want to leave it like that:\n')
             match selection:
                 case "2":
                     print(f'Okey, Welcome {config_dict.get("user_name")} 👋')

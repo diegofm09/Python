@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user_name = storage.change_name()
     while True:
         print("  -------------------------")
-        selection = input("Menu Selection:\n 1) Profile and balance\n 2) Register Transaction\n 3) Transactions Analysis\n 4) Calculators and Simulators\n 5) Monthly Expenses Analysis\n 6) System Auditory\n 7) Close System\n")
+        selection = input("Menu Selection:\n 1) Profile and balance\n 2) Register Transaction\n 3) Transactions Analysis\n 4) Calculators and Simulators\n 5) Monthly Expenses Analysis\n 6) System Audit\n 7) Close System\n")
         print("  -------------------------")
         match selection:
             case "1":
@@ -53,9 +53,10 @@ if __name__ == "__main__":
                             print("Error, please enter a number between 1 and 8")
                     concept = input("Enter the concept: ")
                     date = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
-                    id = storage.load_transactions()[-1]["id"] + 1
-                    print(id)
-                    print("asw")
+
+                    trans_list = storage.load_transactions()
+                    id = (trans_list[-1]["id"] + 1) if trans_list else 1
+
                     trans_list = storage.load_transactions()
                     trans_list.append({"id": id, "amount": amount, "category": category, "concept": concept, "date": date})  
                     print(trans_list)
