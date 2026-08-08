@@ -11,8 +11,8 @@ Hi! I'm really interested in **Computer Science** so I've started to learn about
 
 ## 📁 Repository Structure
 
-- `Daily_python_exercises/`: Where I upload what I've learned every day.
-- `Projects/`: Where at the end of each unit I upload a project where I practice everything I've learned until that moment.
+- `Daily_python_exercises/`: Where I upload what I've learned every day
+- `Projects/`: Where at the end of each unit I upload a project where I practice everything I've learned until that moment
 
 ## 📈 My Progress
 
