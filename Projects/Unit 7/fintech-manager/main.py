@@ -8,6 +8,7 @@ config_path = main_path/"config.json"
 app_log_path = main_path/"data"/"app_log.txt"
 counter = 0
 
+
 if __name__ == "__main__":
     storage.initialize_files()
     user_name = storage.change_name()

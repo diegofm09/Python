@@ -3,10 +3,12 @@ import time
 import json
 from pathlib import Path
 
+
 main_path =  Path(__file__).resolve().parent.parent
 data_path = main_path/"data"
 app_log_path = data_path/"app_log.txt"
 config_path = main_path/"config.json"
+
 
 def performance(function):
     def wrapper(*args, **kwargs):

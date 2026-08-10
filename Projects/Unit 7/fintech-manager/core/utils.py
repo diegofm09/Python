@@ -1,6 +1,7 @@
 import datetime
 import random
 
+
 def calculate_compound_interest(initial_money, interest_rate, years):
     assert initial_money>0 and interest_rate>=0 and years>0
     for i in range(years):
