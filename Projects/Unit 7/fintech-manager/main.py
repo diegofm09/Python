@@ -25,6 +25,7 @@ if __name__ == "__main__":
                 print(f'Profile:\n Username: {user_name}\n Currency: {config.get("currency")}\n Expense Limit: {config.get("expense_limit")}\n Net Balance: {net_balance}')
                 print("✅ ALL GOOD ✅" if net_balance >= 0 else "⚠️ DANGER, NET BALANCE BELOW 0 ⚠️")
 
+
             case "2":
                 print("New Transaction:")
                 try:
@@ -64,6 +65,7 @@ if __name__ == "__main__":
                     storage.save_transactions(trans_list)
                 except ValueError:
                     print("Error, the amount must be a number")     
+
 
             case "3":
                 trans_list = storage.load_transactions()
@@ -105,6 +107,7 @@ if __name__ == "__main__":
                                             print("Error, please enter Y or N")
 
                                     data_variable = finance.data_extractor(trans_list, specific_category)
+
 
                                     add_internationals = input("Do you want to add international movements?(Y/N): ").capitalize()
                                     match add_internationals:
