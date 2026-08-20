@@ -18,12 +18,12 @@ A script that helps you to track your transactions. Made with Python using modul
 
 ## 🚀 Features
 
-- **Transaction Management:** Allows registering, sorting, and analyzing transactions by category, date, or amount.
-- **Data Persistence:** Automatically stores transactions and configuration in JSON files using robust file handling.
-- **Set Theory Analysis:** Compares monthly spending patterns with historical data using Python set operations (`&`, `-`).
-- **Financial Utilities:** Includes a compound interest calculator, a stock market volatility simulator, and a date planner.
-- **Performance Auditing:** Uses custom decorators to log execution times for critical functions in real time.
-- **Robust Error Handling:** Prevents crashes from invalid inputs, missing files, or empty data lists.
+- **Transaction Management:** Allows registering, sorting, and analyzing transactions by category, date, or amount
+- **Data Persistence:** Automatically stores transactions and configuration in JSON files using robust file handling
+- **Set Theory Analysis:** Compares monthly spending patterns with historical data using Python set operations (`&`, `-`)
+- **Financial Utilities:** Includes a compound interest calculator, a stock market volatility simulator, and a date planner
+- **Performance Auditing:** Uses custom decorators to log execution times for critical functions in real time
+- **Robust Error Handling:** Prevents crashes from invalid inputs, missing files, or empty data lists
 
 ---
 
