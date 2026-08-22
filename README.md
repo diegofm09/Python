@@ -16,7 +16,7 @@ Hi! I'm really interested in **Computer Science** so I've started to learn about
 
 ## 📈 My Progress
 
-- **Current Unit:** Unit 7 - File handling
+- **Current Unit:** Unit 8 - OOP
 - **Status:** Learning and improving every day
 
 ---
