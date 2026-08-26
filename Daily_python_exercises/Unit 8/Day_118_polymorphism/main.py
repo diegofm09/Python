@@ -18,9 +18,7 @@ class Cat(Animal):
 
     def sound(self):
         print("Miaauuu")
-
         
-
 animals = [Cat(), Dog()]
 
 for animal in animals:
