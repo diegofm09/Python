@@ -24,5 +24,5 @@ animals = [Cat(), Dog()]
 for animal in animals:
     animal.sound()
 
-print("Since we can use the 'sound()' method in both Cat and Dog, they have polymorphism in sound()")
+print("Since we can use the 'sound()' method in both Cat and Dog, they have polymorphism in sound(), thanks to they having the same parent")
 
