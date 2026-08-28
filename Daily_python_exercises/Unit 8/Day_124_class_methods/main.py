@@ -1,7 +1,6 @@
 class Student:
 
     count = 0
-
     classroom = "2023-2024 2ºA"
 
     def __init__(self, name, gpa):
