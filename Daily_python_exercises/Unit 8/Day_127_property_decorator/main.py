@@ -28,8 +28,11 @@ rect = Rectangle(4, 7)
 
 
 print(rect._height)
+
 print(rect.height)
 
 rect.width = 21
+
 print(rect.width)
+
 del rect.width
